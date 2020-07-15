@@ -470,13 +470,15 @@ $('.ytp-pause-overlay').addClass('none');
 $('.ytp-pause-overlay').addClass('none');
 
 
-// VIDEO PLAYER INFO HOVER    
+// VIDEO PLAYER INFO HOVER
+    
+    
 var holdHover;
 $('#infobtn').hover(
    function(){
    holdHover = setTimeout(function(){
        $('#vid-overlay').fadeIn(200);    
-   }, 300);
+   }, 100);
 },
     function(){
         clearTimeout(holdHover);
@@ -559,8 +561,8 @@ $('#slick-3').on('beforeChange', function(event, slick, currentSlide, nextSlide)
 var saveSeek;
 
 const bgMusic = new Howl({
- //  src: ['audio/Bg_Shyguys_Pursuit_1.mp3'],
-    src: ['audio/BgSprite_Marvel83_2049_Song.mp3'],
+   src: ['audio/Bg_Shyguys_Pursuit_1.mp3'],
+//    src: ['audio/BgSprite_Marvel83_2049_Song.mp3'],
     volume: 0.5,
     loop: true,
 });
@@ -582,7 +584,7 @@ bgMusicLoader.play('loadermusic');
 
 const sprites = new Howl({
        src: ['audio/PoopySFX_1.mp3'],
-       volume: 0.02,
+       volume: 0.2,
        preload: true,
        onplayerror: function(){
             sprites.once('unlock', function(){
