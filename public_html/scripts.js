@@ -302,7 +302,7 @@ var vidPlayer = videojs("video-player");
 //VIDEO METADATA
 var vidPlaylist = [{
     name: 'Jodie | Short Film',
-    description: 'Production Sound Supervisor, Production Sound Mixer, Post-Production Sound Supervisor, Editor, and Mixer',
+    description: '',
     duration: 520,
     sources: [{
         src: 'video/Jodie CONFORM_071020.mp4',
@@ -685,85 +685,3 @@ $('.audio-menu a').click(function(){
     
 //setInterval(function(){sprites.play('startup2')})
 
-//$(window).mouseover(function(){
-//    var howlerState = Howler.state;
-//    var howlerCtx = Howler.ctx;
-////    var audioCtx = new AudioContext();
-////    var audioState = audioCtx.state;
-//        console.log(howlerState);
-//        console.log(howlerCtx);
-////        console.log('audioState: ' + audioState);
-//    if (Howler.ctx.state !== 'running') {
-//        Howler.state = 'running';
-//    }
-//});  
-
-
-//var vertexHeight = 15000;
-//var planeDefinition = 100;
-//var planeSize = 1245000;
-//var totalObjects = 50000;
-//var frame = 60;
-//
-//var container = document.createElement('div');
-//document.body.appendChild(container);
-//
-//var camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 1, 400000)
-//camera.position.z = 50000;
-//camera.position.y = 15000;
-//camera.lookAt(new THREE.Vector3(0, 15900, 0));
-//
-//var scene = new THREE.Scene();
-//scene.fog = new THREE.Fog(0x23233f, 1, 300000);
-//
-//var uniforms = {
-//  time: {
-//    type: "f",
-//    value: 0.0
-//  }
-//};
-//
-//var material = new THREE.ShaderMaterial({
-//  uniforms: uniforms,
-//  vertexShader: document.getElementById('vertexShader').textContent,
-//  fragmentShader: document.getElementById('fragmentShader').textContent,
-//  wireframe: true,
-//  fog:true
-//});
-//
-//var plane = new THREE.Mesh(new THREE.PlaneGeometry(planeSize, planeSize, planeDefinition, planeDefinition), material);
-//plane.rotation.x -= Math.PI * .50;
-//
-//scene.add(plane);
-//
-//var geometry = new THREE.Geometry();
-//
-//for (i = 0; i < totalObjects; i++) {
-//  var vertex = new THREE.Vector3();
-//  vertex.x = Math.random() * planeSize - (planeSize * .5);
-//  vertex.y = (Math.random() * 100000) + 10000;
-//  vertex.z = Math.random() * planeSize - (planeSize * .5);
-//  geometry.vertices.push(vertex);
-//}
-//
-//var material = new THREE.ParticleBasicMaterial({
-//  size: 400
-//});
-//var particles = new THREE.ParticleSystem(geometry, material);
-//
-//scene.add(particles);
-//
-//var renderer = new THREE.WebGLRenderer();
-//renderer.setSize(window.innerWidth, window.innerHeight);
-//container.appendChild(renderer.domElement);
-//
-//render();
-//
-//function render() {
-//  requestAnimationFrame(render);
-//  camera.position.z -= 150;
-//  uniforms.time.value = frame;
-//  frame += .03;
-//  //  dateVerts();
-//  renderer.render(scene, camera);
-//}    
