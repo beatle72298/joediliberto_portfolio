@@ -735,3 +735,12 @@ $('.audio-menu a').click(function(){
     
 //setInterval(function(){sprites.play('startup2')})
 
+$(function() {
+        // Load the Folio theme
+//        Galleria.loadTheme('/scripts/galleria.folio.min.js');
+
+        // Initialize Galleria
+        Galleria.run('.galleria', {
+            _center: true,
+        });
+});

@@ -234,7 +234,7 @@ a.active{
 .s3{
     display: inline-grid;
     grid-template-columns: 10% auto;
-    background: linear-gradient(to top left, black, black, rgba(0,0,0,0) 95%);
+/*    background: linear-gradient(to top left, black, black, rgba(0,0,0,0) 95%);*/
 }
 
 
@@ -430,7 +430,7 @@ li{list-style: none;}
 }
 
 .slick-3{
-    display: block;
+    display: flex;
     overflow-x: hidden;
     overflow-y: hidden;
     width: 90vw;
@@ -439,8 +439,8 @@ li{list-style: none;}
     position: absolute;
     top: 5vh;
 }
-
-#slick-3 div{
+ 
+#slick-3 > div{
     display: inline-block;
     float: left;
     width: inherit;
@@ -453,29 +453,39 @@ li{list-style: none;}
     font-size: 32px;
 }
 
-#development-section > div{
-    display: block;
-    width: 100%;
-}
+
 
 #design-section{
-    display: flex !important;
     height: 70vh !important;
-    overflow-y: scroll;
-    justify-content: center;
-    align-content: flex-start;
-    align-items: center !important;
-    flex-flow: row!important;
-    flex-wrap: wrap !important;
+    position: absolute;
+    z-index: 0;
+    width: 90vw;
     margin-top: 10vh;
+    margin-right: 5vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
+.galleria{
+    width: 95% !important;
+    height: 70vh !important;
+    z-index: 1;
+    position: absolute;
+    float: none !important;
+    display: block;
+    top: 0;
+    overflow-y: scroll;
+    overflow-x: visible;
+}
+
+/*
 .thumb{
     background-color: aqua;
     width: 300px !important;
     height: 300px !important;
     margin: 15px 20px;
 }
+*/
 
 
 
