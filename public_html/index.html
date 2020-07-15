@@ -34,8 +34,6 @@
     <link href="styles/player.css" type="text/css" rel="stylesheet">
     <link href="styles/loader.css" type="text/css" rel="stylesheet">
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-    
     <link rel="stylesheet" href="styles/stars.css" type="text/css">
     
 </head>
@@ -154,7 +152,9 @@
         <!--FILM PAGE-->
                 <div id="film-section" class="content-slide">
                     <div class="video-player-wrap">
+                    
                     <div id="vid-overlay">
+                        <i id="infobtn" class="fa fa-info"></i>
                         <span>Description:</span><br>
                         <p id="vidDescription"></p>
                     </div>
@@ -212,8 +212,8 @@
         
         
         <div id="center" class="c3">
-            <h1 id="hero-title" class="glitch">Joe Diliberto's</h1><br>
-                <h2 class="dreams windows">Portfolio</h2>
+            <h1 id="hero-title" class="">Joe Diliberto's</h1><br>
+                <h2 class="dreams windows glitch">Portfolio</h2>
             <br><br><br><br><br><br><br><br><br>
             <div id="type" class="type subtitle">
             <h2>Developer | Designer | Audiophile</h2></div>
@@ -288,12 +288,26 @@
 <div class="space">
 <div class="stars"></div>
 </div>
-<div class="midnightGrid">
+<div class="midnightGrid exclusion">
         <div class="gridInner">
             <div class="grid-x"></div>
             <div class="grid-y"></div>
-        </div>
+        </div>        
 </div>
+    
+<svg id="svg-filter">
+  <defs>
+    <filter id="svgblur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" />
+    </filter>
+  </defs>
+</svg>    
+
+<div id="grid-glow" class="midnightGrid">
+        <div class="gridInner">
+            <div class="grid-x" ></div>
+            <div class="grid-y"></div>
+  </div> 
 </div>
 
 

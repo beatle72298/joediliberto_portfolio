@@ -105,9 +105,10 @@ h1{font-family: 'Press Start 2P', cursive; margin: 0px auto;}
 #mute{
     font-size: 28px;
     position: absolute;
-    left: 50%;
+    left: 50% !important;
     top: 70%;
     margin: 0 auto;
+    z-index: 100;
 }
 
 #mute-btn::after{
@@ -323,6 +324,15 @@ li{list-style: none;}
     box-sizing: border-box;
 }
 
+#vid-overlay.active{
+    background-color: rgba(39, 90, 146,.2);
+}
+
+#video-player_youtube_api{
+    height: 140% !important;
+    top: -20% !important; 
+    clip: rect(0px,0px,500px, 0px);
+}
 
 #vid-overlay{
     background-color: rgba(39, 90, 146,.2);
@@ -425,7 +435,7 @@ li{list-style: none;}
   margin-top: 40px;
   -webkit-text-stroke: 1px #f008b7;
   -webkit-filter: drop-shadow(2px 2px 20px #f008b7);
-  z-index: 20;
+  z-index: 5;
 }
 
 .windows .dreams {
@@ -444,6 +454,9 @@ li{list-style: none;}
   line-height: 1;
   text-transform: uppercase;
   transform: scale(1.5);
+  position: absolute;
+  z-index: -1;
+  white-space: nowrap;
 }
 
 #hero-title:before {
@@ -469,6 +482,14 @@ li{list-style: none;}
   0% {background-position:-680px 0;}
   10% {background-position:420px 0;}
   100% {background-position:420px 0;}
+}
+
+
+.subtitle{
+    position: absolute;
+    left: 23%;
+    z-index: 3;
+    text-shadow: 0px 0px 12px black;
 }
 
 /*
@@ -581,6 +602,8 @@ li{list-style: none;}
 }
 
 
+
+
 /*THE GRID*/
 .midnightGrid{
   position:absolute;
@@ -590,9 +613,14 @@ li{list-style: none;}
   height:100%;
   transform-origin:top center;
   overflow-y:hidden;
-  mix-blend-mode: exclusion;
+
 /*  opacity: .9;*/
 }
+
+.exclusion{
+      mix-blend-mode: exclusion;
+}
+
 
 .midnightGrid{
   transform:perspective(55vmin) rotateX(80deg) scaleX(1.0); 
@@ -611,6 +639,26 @@ li{list-style: none;}
   width:100%;
   z-index:9;
 }
+
+
+#grid-glow{
+    transform:perspective(55vmin) rotateX(80deg) scaleX(1.0) translateX(5px);  
+    -webkit-filter: url(#svgblur);
+    filter: url(#svgblur);
+    mix-blend-mode: screen;
+
+}
+
+#grid-glow .grid-x{background: repeating-linear-gradient(
+    to top,
+    rgba(194,44,146,0),
+    rgba(0,100,0,0) 2.4vmax,
+    rgba(250,0,0,1) 2.4vmax,
+    rgba(0,0,250,1) 2.56vmax
+  );
+    
+}
+
 
 .grid-x,.grid-y{
   width:100vw;
@@ -691,4 +739,26 @@ main{
 .none{
     display: none !important;
     opacity: 0 !important;
+}
+
+
+/*--------------------------------------------------------------------------------SCROLLBAR---------------------------------------------------------------------------------------------------*/
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

@@ -186,11 +186,11 @@ $( function(){
         scale: false,
         blend: true,
         blendModeType: 'overlay',
-        glitch1TimeMin: 10,
-        glitch1TimeMax: 100,
-        glitch2TimeMin: 10,
-        glitch2TimeMax: 200,
-        zIndexStart: 8,
+        glitch1TimeMin: 50,
+        glitch1TimeMax: 500,
+        glitch2TimeMin: 200,
+        glitch2TimeMax: 800,
+        zIndexStart: 3,
     });
     $('.glitch-1').mgGlitch({
         destroy: false,
