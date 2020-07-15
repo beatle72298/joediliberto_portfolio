@@ -1,0 +1,694 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa&family=Press+Start+2P&family=Quantico&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@900&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Mr+Dafoe);
+/*
+font-family: 'Changa', sans-serif;
+font-family: 'Press Start 2P', cursive;
+font-family: 'Quantico', sans-serif;
+*/
+
+body{
+    font-family: 'Quantico', sans-serif;
+    width: 100vw;
+    margin: 0px;
+    overflow-x: hidden;
+    overflow-y: visible;
+    background-color: black;
+    color: aliceblue;
+    box-sizing: border-box;
+}
+
+main{z-index: 3; position: absolute;}
+
+ .bg{
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom right, 
+    black, navy,
+    blue, darkmagenta, 
+    darkviolet, indigo, midnightblue);
+  background-repeat: no-repeat;
+  background-size: 1000% 1000%;
+  animation: gradient 60s ease infinite;
+  position: relative;
+}
+
+@keyframes gradient { 
+  0%{background-position:0% 0%}
+  50%{background-position:100% 100%}
+  100%{background-position:0% 0%}
+}
+
+a{text-decoration: none; color: inherit;}
+
+i{color: aliceblue;}
+
+h1{font-family: 'Press Start 2P', cursive; margin: 0px auto;}
+
+.s2{ color: aliceblue;}
+
+.side{text-align: center;color: aliceblue; position: relative;}
+
+.side h2{display: block; position: absolute; width: 100%;}
+
+.side i{
+    font-size: 100px;
+    z-index: 500;
+    display: block;
+    padding: 0px 10%;
+    margin: 0;
+    position: absolute;
+    width: 100%;
+}
+
+#slick-1{position: absolute;z-index: 3;}
+
+
+.vertical-flex{display: flex; flex-direction: column; justify-content: center; }
+
+
+
+
+
+.hover{letter-spacing: 5px;transition: .3s ease all; animation: var(--flicker);}
+
+
+.glitch-transition{transition: .3s ease all; animation: var(--flicker);}
+
+.c1.hover{transform: scale(1.05);}
+.c5.hover{transform: scale(1.05);}
+
+
+.back-home.hover{transform: scale(1.05);}
+.back-home span{position: absolute; right: 25%; bottom: 35%; white-space: nowrap;}
+.b2 span{left: 25%; right: unset;}
+
+.left{transition: .5s ease all;}
+.right{transition: .5s ease all;}
+
+.c2{text-align: left; }
+.c4{text-align: right;}
+.c1{ text-align: left;}
+.c5{ text-align: right; margin-right:56px;}
+
+
+
+#center{text-align: center; position: relative; top: 20%}
+
+#center h1{
+    width: 100%;
+    position: absolute; 
+}
+
+#mute{
+    font-size: 28px;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    margin: 0 auto;
+}
+
+#mute-btn::after{
+    content: '|';
+    display: block;
+    margin-top: 15px;
+    position:absolute;
+    right: 50%;
+    color: aliceblue;
+}
+
+#mute-btn{
+    position:absolute;
+    right: 0px; 
+}
+
+#mute-btn:hover{
+    cursor: pointer;
+}
+
+.muted #mute-btn{
+    color: grey;
+}
+
+#mute.muted::after{
+    content:'/';
+    z-index: -1;
+    font-family: serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: grey;
+    position: absolute;
+    right: 8px;
+    top: -15px;
+/*    transform: scale(1.5);*/
+    transform: rotate(10deg)scale(1.3);
+    display: block;
+}
+
+.s1, .s2, .s3{
+    width: 100vw;
+    height: 100vh;
+    display: inline-block;
+    float: left;
+    color: aliceblue;
+}
+
+h1, h2, a {z-index: 500;}
+
+
+/*--------------------------------------------------------------------------------SLIDE-1--AUDIO-WORK-------------------------------------------------------------------------------------------------*/
+
+.s1{
+    display: inline-grid;
+    grid-template-columns: auto 10%;
+    background: linear-gradient(to top right, black, black, rgba(0,0,0,0) 95%);
+}
+
+.audio-menu, .dd-menu{
+    width: 100%;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+/*    border-bottom: 1px white dashed;*/
+/*    padding-bottom: .5em;*/
+    margin: 0;
+    height: 
+    
+}
+
+.audio-menu li, .dd-menu li{display: inline-block;padding: .8em 50px;}
+
+.audio-menu a:hover{animation:var(--flicker);}
+
+
+.slick-2{
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 90vw;
+    height: 95vh;
+    position: absolute;
+    left: 0;
+}
+
+#slick-2 > div{
+    float: left;
+    width: inherit;
+    height: inherit;
+}
+
+a.active{
+    background-color: aliceblue;
+    color: black;
+    transition: .1s ease all;
+}
+
+.s3{
+    display: inline-grid;
+    grid-template-columns: 10% auto;
+    background: linear-gradient(to top left, black, black, rgba(0,0,0,0) 95%);
+}
+
+
+.main-grid{
+    display: inline-grid;
+/*    grid-template-columns: 10% 15% auto 15% 10% ;*/
+    grid-template-columns: 25% auto 25%;
+}
+
+#left, #right{display: inline-grid; grid-template-columns: 50% 50%;}
+
+/*----AUDIO-PAGE-1-----------------------------------------------------------------MUSIC------------------------------------------------------------*/
+
+/*
+div.slick-track{
+    transform: translate3d(1920,0,0) !important;
+}
+*/
+
+li{list-style: none;}
+
+#slick-4{
+    position: relative;
+    left: 0px;
+    top: 10vh;
+    width: inherit;
+    height: inherit;
+    display: inline-block;
+    z-index: 0;
+    margin: 20px auto;
+    pointer-events: none;
+    overflow-x: hidden;
+}
+
+.album-slide{
+    width: 400px !important;
+    height: 400px;
+    position: relative;
+    z-index: 500;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 20px;
+    opacity: .5;
+    transition: .2s ease all;
+}
+
+#music-section{
+    width: 90vw !important;
+    height: 95vh !important;
+}
+
+
+#album-1{background-image: url(images/ICanLive_Cover.jpg);}
+#album-2{background-image: url(images/DecentHeartedMan_Cover.png);}
+#album-3{background-image: url(images/AlbumArt_Solaris.png);}
+#album-4{background-image: url(images/AlbumArt_HotelofGlassBodyAgainstMind.png);}
+#album-5{background-image: url(images/AlbumArt_BlackSwanFallenAngels.png);}
+#album-6, #album-7{background-image: url(images/AlbumArt_Hypnagogia.jpg);}
+#album-8{background-image: url(images/AlbumArt_Faythe.png);}
+#album-9{background-image: url(images/AlbumArt_BrokenSuburbia.png);}
+
+/*
+#slick-4 .slick-active{
+    transform: scale(1.1);
+    margin: 0px 30px;
+    transition: .2s ease all;
+    
+}
+*/
+
+
+/*----AUDIO-PAGE-2-----------------------------------------------------------------FILM-------------------------------------------------------------*/
+
+
+
+#film-section{
+    width: 90vw !important;
+    height: 95vh !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    
+}
+
+.video-player-wrap{
+    width: 100%;
+    height: 90%;
+    display: inline-grid;
+    grid-template-columns: 25% auto;
+    padding-top: 0;
+    box-sizing: border-box;
+}
+
+#video-player{
+    z-index: ;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+/*    border: 2px rgba(100,100,100, .9) dashed;*/
+    border-right: none;
+}
+
+.vjs-playlist{
+    width: 100%;
+    height: 100%;
+/*    border: 2px rgba(100,100,100, .9) dashed;*/
+    box-sizing: border-box;
+}
+
+
+#vid-overlay{
+    background-color: rgba(39, 90, 146,.2);
+/*    background-color: aquamarine;*/
+    width: 75%;
+    height: 76%;
+    left: 25%;
+    position: absolute;
+    pointer-events: none;
+    z-index: 5000;
+    padding: 50px;
+    text-shadow: 1px 1px 5px black;
+}
+
+/*--------------------------------------------------------------------------------SLIDE-3----DESIGN & DEVELOPMENT---------------------------------------------------------------------------------------------------*/
+
+.dd-menu{
+    height: 62.38px;
+}
+
+.slick-3{
+    display: block;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 90vw;
+    height: 95vh;
+    margin-left: 10vw;
+    position: absolute;
+    top: 5vh;
+}
+
+#slick-3 div{
+    display: inline-block;
+    float: left;
+    width: inherit;
+    height: inherit;
+}
+
+.content-slide{
+    padding: 40px;
+    padding-bottom: 0px;
+    font-size: 32px;
+}
+
+#development-section > div{
+    display: block;
+    width: 100%;
+}
+
+#design-section{
+    display: flex !important;
+    height: 70vh !important;
+    overflow-y: scroll;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: center !important;
+    flex-flow: row!important;
+    flex-wrap: wrap !important;
+    margin-top: 10vh;
+}
+
+.thumb{
+    background-color: aqua;
+    width: 300px !important;
+    height: 300px !important;
+    margin: 15px 20px;
+}
+
+
+
+
+/*--------------------------------------------------------------------------------80s GRID---------------------------------------------------------------------------------------------------*/
+#center{
+    
+}
+/*@import url(https://fonts.googleapis.com/css?family=Titillium+Web:900);*/
+
+/*
+@font-face{
+    font-family: 'Titillium Web', sans-serif;
+    src: url(https://fonts.googleapis.com/css?family=Titillium+Web:900);
+}
+*/
+.stars{
+    background-color: rgba(0,0,0,0)!important;
+    mix-blend-mode: lighten;
+}
+
+.dreams {
+  position: absolute;
+  white-space: nowrap;
+  margin: 0px;
+  font-family: 'Mr Dafoe', cursive;
+  font-size: 130px !important;
+  color: #F975F7 ;
+  transform:rotate(-15deg);
+  -ms-transform:rotate(-15deg); 
+  -webkit-transform:rotate(-15deg); 
+  margin-left: 550px;
+  margin-top: 40px;
+  -webkit-text-stroke: 1px #f008b7;
+  -webkit-filter: drop-shadow(2px 2px 20px #f008b7);
+  z-index: 20;
+}
+
+.windows .dreams {
+  -webkit-text-stroke: 4px #f008b7;
+}
+
+#hero-title{
+ background-image: -webkit-linear-gradient(#378DBC 0%, #B6E8F1 46%, #ffffff 50%, #32120E 54%, #FFC488 58%, #582C11 90%, #EC9B4E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 4px #f5f5f5;
+  font-size: 120px;
+  font-family: 'Titillium Web';
+  font-style: italic;
+  margin: 0;
+  line-height: 1;
+  text-transform: uppercase;
+  transform: scale(1.5);
+}
+
+#hero-title:before {
+  content: "JOE DILIBERTO's";
+  position: absolute;
+  white-space: nowrap;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  background-image: -webkit-linear-gradient(-40deg, transparent 0%, transparent 40%, #fff 50%, transparent 60%, transparent 100%);
+  background-position:-680px 0;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 0;
+  padding-right: 300px;
+  -webkit-animation-name: chrome_effect;
+  -webkit-animation-duration: 6s;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes chrome_effect {
+  0% {background-position:-680px 0;}
+  10% {background-position:420px 0;}
+  100% {background-position:420px 0;}
+}
+
+/*
+#hero-title{
+    text-transform: uppercase;
+    letter-spacing: 12px;
+    font-size: 56px;
+    text-shadow: 1px 0px 15px black;
+}
+*/
+
+/*The sun*/
+.midnightHeart{
+  z-index:2;
+  position: absolute;
+  background: orange;
+  top: 2vh;
+  text-align: center;
+  width:calc(15vmax * 1.4);
+  height:calc(15vmax * 1.4);
+  border-radius:100%;
+  background:linear-gradient(to bottom, #FFD800, #FFD800, #F59440, #F59440, #EB6380, #AA12D7, #4e0962, rgba(0,0,0,0) 95%);
+  display: inline-block;
+  mix-blend-mode: hard-light;
+/*  animation: var(--box-flicker);*/
+  box-shadow: aliceblue 0px 0px 100px;
+  animation: sunglow 10s ease infinite alternate forwards;
+  display: inline-flex;
+  margin-left: -200px;
+}
+
+@keyframes sunglow{
+    0%{box-shadow: #FFD800 0px 0px 100px;}, 
+    25%{box-shadow: #F59440 0px 0px 100px;}, 
+    50%{box-shadow: magenta 0px 0px 100px;},
+    75%{box-shadow: crimson 0px 0px 100px;},
+    100%{box-shadow: aliceblue 0px 0px 100px;},
+}
+
+.midnightHeart::before{
+  content:"";
+  position:relative;
+  display:block;
+  width:100%;
+  height:100%;
+  background: repeating-linear-gradient(
+    to top,
+    rgba(0,0,0,1),
+    rgba(0,0,0,1) 3.8%,
+    rgba(0,0,0,0) 4%,
+    rgba(0,0,0,0) 17%
+  );
+  border-radius:100%;
+  mix-blend-mode: color;
+}
+
+/*the cliffs*/
+.midnightCliffs{
+  position:absolute;
+  display:block;
+  right: 0vw;
+  width:100vw;
+  height:120px;
+  opacity: 1;
+  top:calc(20vmax - 50px);
+  z-index: 2;
+}
+.midnightCliffs::after{
+  content:"";
+  position:relative;
+  display:block;
+  width:100%;
+  height:100%;
+/*
+  background:linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,0.0) 70%, rgba(0,0,0,0) 100%),
+    linear-gradient(to left, rgba(0,0,0,0) 80%, rgba(0,0,0,.7)),
+    linear-gradient(to right, rgba(0,0,0,0) 80%, rgba(0,0,0,.7));
+*/
+}
+
+#slick-1::after{
+    background:linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,0.0) 70%, rgba(0,0,0,1) 100%),
+    linear-gradient(to left, rgba(0,0,0,0) 60%, rgba(0,0,0,1)),
+    linear-gradient(to right, rgba(0,0,0,0) 60%, rgba(0,0,0,1)),
+    linear-gradient(to top, rgba(0,0,0,0) 50%, rgba(0,0,0,.8));
+    width: 100vw;
+    height: 100vh;
+    content:'';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+.cliff1{
+  position:absolute;
+  height:100%;
+  width:100%;
+  background: linear-gradient(-45deg, rgb(0, 170, 220) 2.6vmax, transparent 2.7vmax) 1px 0 / 6.2vw 100%,
+              linear-gradient(60deg, rgb(0, 100, 220) 1.8vmax, transparent 1.9vmax) 0 0 / 6.2vw 100%;
+  
+}
+.cliff2{
+  position:absolute;
+  height:100%;
+  width:100%;
+  background: linear-gradient(25deg, rgb(40, 170, 220) 3vmax, transparent 2.7vmax) -31px 0 / 7.3vw 100%,
+              linear-gradient(-40deg, rgb(40, 160, 220) 2.55vmax, transparent 1.9vmax) -30px 0 / 7.3vw 100%;
+}
+
+
+/*THE GRID*/
+.midnightGrid{
+  position:absolute;
+  z-index:1;
+  top:45vh;
+  width:100%;
+  height:100%;
+  transform-origin:top center;
+  overflow-y:hidden;
+  mix-blend-mode: exclusion;
+/*  opacity: .9;*/
+}
+
+.midnightGrid{
+  transform:perspective(55vmin) rotateX(80deg) scaleX(1.0); 
+}
+
+.gridInner{
+  animation:animatedGrid 20s linear infinite;
+}
+
+.midnightGrid::after{
+  content:"";
+  background:linear-gradient(to top, rgba(0,0,0,0) 60%, rgba(0,0,0,.4) 90%);
+  display:block;
+  position:relative;
+  height:100%;
+  width:100%;
+  z-index:9;
+}
+
+.grid-x,.grid-y{
+  width:100vw;
+  height:100vw;
+  position:absolute;
+  bottom:0;
+  left:0;
+  background: repeating-linear-gradient(
+    to top,
+    rgba(194,44,146,0),
+    rgba(0,100,0,0) 2.4vmax,
+    rgba(200,0,300,1) 2.4vmax,
+    rgba(0,300,200,1) 2.56vmax
+  );
+}
+
+.grid-y{
+  transform:rotate(90deg);
+}
+@keyframes animatedGrid {
+  from {
+   transform:translateY(80vmin)
+  }
+  to {
+   transform:translateY(130vmin)
+  }
+ }
+
+/*--------------------------------------------------------------------------------TV-SCANLINES---------------------------------------------------------------------------------------------------*/
+
+.marco {
+  pointer-events: none;
+  z-index: 10001;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url('http://wizard.ae.krakow.pl/~jb/qaop/tv.png')
+}
+
+@keyframes parpadeoScanlines {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.scanlines {
+  pointer-events: none;
+  animation: 0.2s normal parpadeoScanlines infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient( to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0.6));
+  background-size: 100% 0.35rem;
+  z-index: 10000;
+}
+
+/*--------------------------------------------------------------------------------TYPE-EFFECT---------------------------------------------------------------------------------------------------*/
+
+
+#type{
+    font-size: 32px;
+}
+
+/*
+main{
+    display: none;
+}*/
+
+.none{
+    display: none !important;
+    opacity: 0 !important;
+}

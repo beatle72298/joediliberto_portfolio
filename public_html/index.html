@@ -1,0 +1,328 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Joe Diliberto | Portfolio</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
+    
+    
+<!--VIDEO-JS CORE CSS-->
+    <link
+  href="https://unpkg.com/video.js@7/dist/video-js.min.css"
+  rel="stylesheet"/>
+<!--VIDEO-JS SEA THEME CSS-->
+     <link href="https://unpkg.com/@videojs/themes@1/dist/sea/index.css" rel="stylesheet">    
+<!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+<script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    
+    
+<!--JQUERY------>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+
+    
+<!--SLICK-JS CORE CSS-->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    
+    
+    <link rel="stylesheet" type="text/css" href="styles/videojs-playlist-ui.css">
+
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="styles/player.css" type="text/css" rel="stylesheet">
+    <link href="styles/loader.css" type="text/css" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    
+    <link rel="stylesheet" href="styles/stars.css" type="text/css">
+    
+</head>
+
+<body id="body"> 
+
+<!--LOADER--ANIMATION---->
+<div id="loader-wrap" class="on">
+    <div id="screen">
+        <div id="content-holder">
+            <div id="content">
+                <div id="app">
+                    <div id="channel">AV1</div>
+                    <div id="text" class="">Loading...</div>
+                    <div class="bar-holder">
+                        <div class="loader-bar">
+                        </div>
+                    </div>
+                    <div id="load-percent">
+                        <span id="loader-text">0</span><span>%</span>
+                    </div>
+                </div>
+                <div id="sound_on">
+                <span>Sound On</span>
+                <i id="phones_ico" class="fa fa-headphones"></i>
+                </div>
+            </div>
+            <btn id="welcome_btn">ENTER NOW</btn>
+        </div>
+    </div>
+</div>
+    
+<main id="" class="">
+<div class="scanlines"></div>                                       <div class="marco"></div>
+
+<div id="slick-1" class="slick slider-for">
+    
+<!--SLIDE 1---DIGITAL AUDIO-->
+    <div class="s1 slide">
+        <div class="content"> 
+        <!--AUDIO NAV-->
+            <ul class="audio-menu">
+                <a id="music" data-target="0" href="#" class="active" ><li>Music</li></a>
+                <a id="film" data-target="1" href="#" class=""><li>Film</li></a>
+            </ul>
+            
+<!--MUSIC/FILM CONTENT SLICK-->
+            <div id="slick-2" class="slick-2 slider-for">
+        <!--MUSIC PAGE-->
+                <div id="music-section" class="content-slide">
+                    
+                    <!--COVER FLOW-->
+                    <div id="slick-4" class="slick-4 slider-for">
+                        <div id="album-1" class="album-slide"></div>
+                        <div id="album-2" class="album-slide"></div>
+                        <div id="album-3" class="album-slide"></div>
+                        <div id="album-4" class="album-slide"></div>
+                        <div id="album-5" class="album-slide"></div>
+                        <div id="album-6" class="album-slide"></div>
+                        <div id="album-7" class="album-slide"></div>
+                        <div id="album-8" class="album-slide"></div>
+                        <div id="album-9" class="album-slide"></div>
+                    </div>
+                    
+                    <!--MUSIC PLAYER-->
+                    <div id="music-player">
+                    <!-- Top Info -->
+                      <div id="title">
+                        <span id="track"></span><br>
+                        <span id="artist">Artist:</span><br>
+                        <span id="album">Album:</span><br>
+                        <div id="timer">0:00</div>
+                        <div id="duration">0:00</div>
+                      </div>
+                        
+                    <div id="credit-wrap">
+                        <span>MY CREDITS:</span><br>
+                        <span id="credits">123456</span>
+                    </div>    
+
+                      <!-- Controls -->
+                      <div class="controlsOuter">
+                        <div class="controlsInner">
+                          <div id="loading"></div>
+                          <div class="btn" id="playBtn"></div>
+                          <div class="btn" id="pauseBtn"></div>
+                          <div class="btn" id="prevBtn"></div>
+                          <div class="btn" id="nextBtn"></div>
+                        </div>
+                        <div class="btn" id="playlistBtn"></div>
+                        <div class="btn" id="volumeBtn"></div>
+                      </div>
+
+                      <!-- Progress -->
+                      <div id="waveform"></div>
+                      <div id="bar" style="width: inherit;"></div>
+                      <div id="progress"></div>
+
+                      <!-- Playlist -->
+                      <div id="playlist">
+                        <div id="list"></div>
+                      </div>
+
+                      <!-- Volume -->
+                      <div id="volume" class="fadeout">
+                        <div id="barFull" class="bar"></div>
+                        <div id="barEmpty" class="bar"></div>
+                        <div id="btnwrap">
+                        <div id="sliderBtn"></div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <!--END MUSIC PLAYER-->
+                
+        <!--FILM PAGE-->
+                <div id="film-section" class="content-slide">
+                    <div class="video-player-wrap">
+                    <div id="vid-overlay">
+                        <span>Description:</span><br>
+                        <p id="vidDescription"></p>
+                    </div>
+                    <div class="vjs-playlist"></div>
+                    <video 
+                           id="video-player" 
+                           class="video-js vjs-theme-sea"
+                           controls
+                           preload="auto"
+                           width=""
+                           height=""                       
+                           data-setup='{}'
+                           >
+                        
+<!--data-setup='{"techOrder": ["youtube"],]}'-->
+                    
+                    
+                    <p class="vjs-no-js">
+                        To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="https://videojs.com/html5-video-support/" target="_blank"
+                        >supports HTML5 video</a
+                      >
+                    </p>
+                        
+                    
+                    
+                    </video>
+                    
+                        
+                    
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--RETURN HOME SIDEBAR-->
+        <div class="side vertical-flex main-nav back-home b1">
+            <span class="glitch-3">Back to Home</span>
+            <a data-target="1" href="#" class="arrow "><i class="fa fa-angle-right glitch-3"></i></a>
+        </div>
+    </div>
+
+    
+<!--SLIDE 2---HOME----------->
+    <div class="s2 main-grid slide">
+        
+        <div id="left" class="main-nav">
+            <div id="" class="side c1 left vertical-flex">
+                <a data-target="0" href="#" class="arrow"><i    class="fa fa-angle-left glitch-1"></i></a>
+            </div>
+        
+            <div class="side c2 left vertical-flex">
+                <a data-target="0" href="#" class="arrow"><h2 class="glitch-1">Digital<br>Audio</h2></a>
+            </div>
+        </div>
+        
+        
+        <div id="center" class="c3">
+            <h1 id="hero-title" class="glitch">Joe Diliberto's</h1><br>
+                <h2 class="dreams windows">Portfolio</h2>
+            <br><br><br><br><br><br><br><br><br>
+            <div id="type" class="type subtitle">
+            <h2>Developer | Designer | Audiophile</h2></div>
+            
+            <div id="mute">
+                <i id="mute-btn" class="fa fa-volume-up"></i>
+            </div>
+        </div>
+
+        
+        <div id="right" class="main-nav">
+        <div class="side c4 right vertical-flex">
+            <a data-target="3" href="#" class="arrow"><h2 class="glitch-2">Design/<br>Development</h2></a>
+        </div>
+        
+        <div id="" class="side c5 right vertical-flex">
+            <a data-target="3" href="#" class="arrow"><i class="fa fa-angle-right glitch-2"></i></a> 
+        </div>
+        </div>
+    </div>
+
+
+<!--SLIDE 3---DESIGN&DEVELOPMENT-->
+    
+    <!--D&D-RETURN-HOME-SIDEBAR-->
+    <div class="s3 slide">
+        <div class="side vertical-flex main-nav back-home b2">
+            <span class="glitch-4">Back to Home</span>
+            <a data-target="1" href="#" class="arrow "><i class="fa fa-angle-left glitch-4"></i></a> 
+        </div>
+    <!--D&D-CONTENT SLIDER-->
+         <div id="slick-3" class="slick-3 slider-for">
+                <div id="design-section" class="content-slide">
+                    
+                    <div class="thumb">1</div>
+                    <div class="thumb">2</div>
+                    <div class="thumb">3</div>
+                    <div class="thumb">4</div>
+                    <div class="thumb">5</div>
+                    <div class="thumb">6</div>
+                    <div class="thumb">7</div>
+                    <div class="thumb">8</div>
+                
+                </div>
+                <div id="development-section" class="content-slide">
+                    nations.io
+                    joedmusic.rocks
+                    WhatsTrending.com
+                    theantiquescavenger.com
+                </div>
+        </div>
+
+    <!--DESIGN&DEV-NAV-MENU-->
+        <ul class="dd-menu">
+                <a id="design" data-target="0" href="#" class="active" ><li>Graphic Design</li></a>
+                <a id="development" data-target="1" href="#" class=""><li>Development</li></a>
+        </ul>
+    </div>
+</div>
+    
+</main>
+
+
+<div class="bg" style="text-align: center;">
+<div class="midnightHeart"></div>
+<div class="midnightHeart glitch-5"></div>
+<div class="midnightCliffs">
+        <div class="cliff1"></div>
+        <div class="cliff2"></div>
+</div>
+    
+<div class="space">
+<div class="stars"></div>
+</div>
+<div class="midnightGrid">
+        <div class="gridInner">
+            <div class="grid-x"></div>
+            <div class="grid-y"></div>
+        </div>
+</div>
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.rawgit.com/hmongouachon/mgGlitch/master/src/mgGlitch.js"></script>
+
+<!--3dSHIT MAYBE TRAAAAASHHHHH-->
+
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r58/three.min.js" type="text/javascript"></script>-->
+    
+    
+
+    
+<script src="scripts/howler.core.min.js" type="text/javascript"></script> 
+<script src="scripts/siriwave.js" type="text/javascript"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+
+<script src="https://vjs.zencdn.net/7.8.3/video.js" type="text/javascript"></script>
+<script src="scripts/videojs-playlist.min.js" type="text/javascript"></script>
+<script src="scripts/videojs-playlist-ui.min.js" type="text/javascript"></script>
+<script src="scripts/Youtube.min.js" type="text/javascript"></script>
+<script src="scripts/loader.js" type="text/javascript"></script>
+<script src="scripts.js" type='text/javascript'></script>
+<script src="scripts/music-player.js" type="text/javascript"></script>
+    
+    
+</body>   
+</html>

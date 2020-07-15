@@ -1,0 +1,76 @@
+<!Doctype HTML>
+<html>
+
+<head>
+
+<title>FuckingBlendModeTest</title>
+    
+</head>
+<style>
+    body{
+        height: 100vh;
+        width: 100vw;
+        color: white;
+        text-align: center;
+    }
+    
+    .color-block{
+        display: inline-block;
+        padding: 15px;
+        mix-blend-mode: color;
+    }
+    
+    .b1{background-color: blue;}
+    .b2{background: linear-gradient(to top, rgba(0,0,200,1) 50%, rgba(200,200,200,.6), transparent 100%); mix-blend-mode: difference;z-index: 2;}
+    .b3{background-color: blue;}
+    
+    .bg-pic{
+        background-image: url(images/blackwhite.jpg);
+    }
+    
+.bg{
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom right,  
+    #2C3E50, #FD746C, 
+    #FF8235, 
+    #92FE9D, #00C9FF, 
+    #a044ff, #e73827);
+  background-repeat: no-repeat;
+  background-size: 1000% 1000%;
+  animation: gradient 60s ease infinite;
+  position: relative;
+}
+
+@keyframes gradient { 
+  0%{background-position:0% 0%}
+  50%{background-position:100% 100%}
+  100%{background-position:0% 0%}
+}
+    
+</style>
+    
+    
+    
+<body class="bg">
+<div>
+<div class="color-block b1">
+    <h1>Poopoo</h1>
+</div>    
+</div>
+
+<div class="color-block b2">
+    <h1>Poopoo</h1>
+</div> 
+    
+<div class="color-block b3">
+    <h1>Poopoo</h1>
+</div> 
+    
+    
+</body>
+    
+    
+    
+</html>
