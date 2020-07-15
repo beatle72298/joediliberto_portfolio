@@ -297,12 +297,17 @@ var vidPlayer = videojs("video-player");
 //    videojs_player = this;
 //    videojs_player.play();}
 
-
+var sp = ' | ';
+var br = '<br>'
     
 //VIDEO METADATA
 var vidPlaylist = [{
     name: 'Jodie | Short Film',
-    description: '',
+    year: '(2020)',
+    genre: 'Comedy',
+    credits: 'Director: Jake Meyer',
+    description: "Loyola University New Orleans senior thesis short. Jodie is a young woman in a complete stalemate with her parents, boss, and friends constantly blowing up her phone and proving her dissatisfaction is entirely founded.",
+    mycredits: 'Production Sound Mixer' + sp + 'Post-Production Sound Supervisor' + br + 'Post-Production Sound Editor' + sp + 'Post-Production Sound Mixer' + br + 'Foley Supervisor',
     duration: 520,
     sources: [{
         src: 'video/Jodie CONFORM_071020.mp4',
@@ -320,14 +325,18 @@ var vidPlaylist = [{
 },
 {
     name: 'The Dead Still Dream | Short Film',
-    description: 'Lorem ipsum shit my pantsum1',
+    year: '(2020)',
+    genre: 'Comedy',
+    credits: 'Director: Molly Redepenning',
+    description: "Loyola University New Orleans senior thesis short. The Dead Still Dream follows an undead high school student as he manuvers all the usual difficulties of adolescence and tries to find his place in the world and his human peers.",
+    mycredits: 'Grip' + sp + 'Associate Producer' + sp + 'Production Sound Supervisor' + br + 'Production Sound Mixer' + sp + 'Boom Operator',
     duration: 481,
     sources: [{
         src: 'https://www.youtube.com/embed/SS45sZFLok4&amp;showinfo=0;',
         type: 'video/youtube'
     }],
     youtube: {
-        controls: 0,
+        ytcontrols: 0,
         modestbranding: 1,
     },
     poster: 'images/VidThumb_Molly.png',
@@ -342,7 +351,11 @@ var vidPlaylist = [{
 
 }, {
     name: 'They | Short Film',
-    description: 'Lorem ipsum shit my pantsum2',
+    year: '(2020)',
+    genre: 'Comedy/Drama',
+    credits: 'Director: Mary Grace Copa',
+    description: "Loyola University New Orleans senior thesis short. They is about a battle with pronouns, priests, and princesses... Well, wannabe princesses.",
+    mycredits: 'Production Sound Supervisor' + sp + 'Production Sound Mixer',
     duration: 274,
     sources: [{
         src: 'https://youtu.be/Re7mu7EBSAU',
@@ -360,7 +373,11 @@ var vidPlaylist = [{
 },
 {
     name: 'Directorial & Cinematography Reel',
-    description: 'Test Description 1',
+    year: '(2018)',
+    genre: '',
+    credits: 'N/a',
+    description: "This is a little five minute showcase of some projects that I am post proud of. All of the works featured in this reel are ones in which I was a key creative role, many times wearing a belt full of titles.",
+    mycredits: 'Writer' +sp+ 'Director' + sp + 'Cinematographer' + sp + 'Editor' + sp + 'Many More...',
     duration: 299,
     sources: [{
         src: 'https://youtu.be/gqlb6HsWnWU',
@@ -378,9 +395,11 @@ var vidPlaylist = [{
 },
 {
     name: 'The Knight School | Branding Animation',
-    description: 'Explore the depths of our planet\'s oceans. ' +
-        'Experience the stories that connect their world to ours. ' +
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ',
+    year: '(2017)',
+    genre: 'N/a',
+    credits: 'N/a',
+    description: "Motion graphic I put together for The Knight School America, LLC, a chess school with a nationwide network of coaches. I also edited 100+ PowerPoint lessons into video format to enable nationwide franchising.",
+    mycredits: 'Motion Graphics Designer/Editor' +sp+ 'Project Manager',
     duration: 2,
     sources: [{
         src: 'video/Logo.mp4',
@@ -398,9 +417,11 @@ var vidPlaylist = [{
     
 }, {
     name: 'Faythe | Music Video',
-    description: 'Explore the depths of our planet\'s oceans. ' +
-        'Experience the stories that connect their world to ours. ' +
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ',
+    year: '(2017)',
+    genre: 'Music Video',
+    credits: 'Songwriter/Performer: Joe Diliberto',
+    description: "Faythe is a music video I put together to accompany my original song by the same name. The concept was to have a cloud of colorful 3-D particles that react and move with the music. The camera pushes into the cloud and then... There I am.",
+    mycredits: 'Songwriter' + sp + 'Performer' + sp + 'Director' + sp + 'Editor' +sp+ 'Visual Effects Artist/Editor',
     duration: 264,
     sources: [{
         src: 'https://www.youtube.com/watch?v=k7JKNOq-ADw',
@@ -418,9 +439,11 @@ var vidPlaylist = [{
     
 }, {
     name: 'Pocket Change | Music Video',
-    description: 'Explore the depths of our planet\'s oceans. ' +
-        'Experience the stories that connect their world to ours. ' +
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ',
+    year: '(2017)',
+    genre: 'Music Video',
+    credits: 'Songwriter/Performer: Elijah Poston',
+    description: "Final project submission for Digital Filmmaking I class. Pocket Change follows a disgruntled musician quarreling with lost love and lost dollars.",
+    mycredits: 'Writer' +sp+ 'Producer' +sp+ 'Director' +sp+ 'Cinematographer' +br+ 'Visual Effects Supervisor/Editor' +sp+ 'Assistant Editor',
     duration: 317,
     sources: [{
         src: 'https://youtu.be/vLb8QiG45qg',
@@ -438,7 +461,11 @@ var vidPlaylist = [{
     
 },{
     name: 'The Exchange | Short Action Scene',
-    description: 'Lorem ipsum shit my pantsum3',
+    year: '(2016)',
+    genre: 'Action',
+    credits: 'Songwriter/Performer: Elijah Poston',
+    description: "Final project submission for Digital Filmmaking I class. Pocket Change follows a disgruntled musician quarreling with lost love and lost dollars.",
+    mycredits: 'Director' +sp+ 'Fight Choreographer' +sp+ 'Visual Effects Supervisor/Editor' +br+ 'Editor' +sp+ 'Post-Production Sound Editor/Mixer' +sp+ 'Foley Supervisor'+sp+'Score Composer',
     duration: 124,
     sources: [{
         src: 'https://www.youtube.com/watch?v=REwbCR8Grxw',
@@ -472,31 +499,52 @@ $('.ytp-pause-overlay').addClass('none');
 
 // VIDEO PLAYER INFO HOVER
     
-    
+var isClicked;    
 var holdHover;
 $('#infobtn').hover(
    function(){
    holdHover = setTimeout(function(){
-       $('#vid-overlay').fadeIn(200);    
+       $('#vid-overlay').slideDown(200);    
    }, 100);
 },
     function(){
+    isClicked = $('#vid-overlay').hasClass('infoclick');
+    if(isClicked == true) {
+        console.log('Ive been clicked. Help me Jesus!')
+   } else{
         clearTimeout(holdHover);
-    $('#vid-overlay').fadeOut(200);  
+        $('#vid-overlay').slideUp(200);     
+   }
 });
+    
+$('#infobtn').click(function(){
+    $('#vid-overlay').toggleClass('infoclick');
+    $('#vid-overlay.infoclick').slideDown(200);
+});  
+    
 
 //VIDEO METADATA DISPLAY PANE
-var elms = ['vidDescription', 'vid-overlay'];
+var elms = ['vidDescription', 'vid-overlay', 'vidYear', 'vidCredits', 'myvidCredits', 'vidName', 'vidGenre'];
 elms.forEach(function(elm) {
   window[elm] = document.getElementById(elm);
 });
 
+vidGenre.innerHTML = vidPlaylist[0].genre;
+vidName.innerHTML = vidPlaylist[0].name;
 vidDescription.innerHTML = vidPlaylist[0].description;
-
+vidYear.innerHTML = vidPlaylist[0].year;
+vidCredits.innerHTML = vidPlaylist[0].credits;
+myvidCredits.innerHTML = vidPlaylist[0].mycredits;
+    
 vidPlayer.on('playlistitem', function(){
    var self = this;
    var data = vidPlayer.playlist.currentIndex();
+   vidName.innerHTML = vidPlaylist[data + 0].name;
+   vidYear.innerHTML = vidPlaylist[data + 0].year;
+   vidGenre.innerHTML = vidPlaylist[data + 0].genre;
    vidDescription.innerHTML = vidPlaylist[data + 0].description;
+   vidCredits.innerHTML = vidPlaylist[data + 0].credits;
+   myvidCredits.innerHTML = vidPlaylist[data + 0].mycredits;
 });
     
 //vidPlayer.on('play', () => {

@@ -371,15 +371,30 @@ li{list-style: none;}
 
 #vid-overlay{
     width: 81%;
-    height: 87.5%;
+    height: 88%;
     top: 0;
     left: 0;
     padding: 50px;
-    background-color: rgba(39, 90, 146,.2);
+    background-color: rgba(30, 20, 90,.6);
     position: absolute;
     pointer-events: none;
     padding-top: 100px;
+    padding-left: 75px;
     display: none;
+}
+
+#vidName{text-transform: uppercase; font-weight: 900; text-decoration: underline;}
+
+.vidheading{font-weight: 800; text-transform: uppercase; text-decoration: overline; font-size: 32px;}
+
+#descheading{
+    display: block;
+    width: 100%;
+}
+
+#vidDescription{
+    font-size: 24px;
+    display: block;
 }
 
 #infobtn{
@@ -405,6 +420,8 @@ li{list-style: none;}
     transition: .2s ease all;
 }
 
+
+#myvidCredits{word-break: keep-all;}
 
 /*--------------------------------------------------------------------------------SLIDE-3----DESIGN & DEVELOPMENT---------------------------------------------------------------------------------------------------*/
 
