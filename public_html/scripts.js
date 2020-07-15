@@ -468,9 +468,22 @@ vidPlayer.playlistUi();
 $('.ytp-pause-overlay').hide();
 $('.ytp-pause-overlay').addClass('none');
 $('.ytp-pause-overlay').addClass('none');
-    
 
 
+// VIDEO PLAYER INFO HOVER    
+var holdHover;
+$('#infobtn').hover(
+   function(){
+   holdHover = setTimeout(function(){
+       $('#vid-overlay').fadeIn(200);    
+   }, 300);
+},
+    function(){
+        clearTimeout(holdHover);
+    $('#vid-overlay').fadeOut(200);  
+});
+
+//VIDEO METADATA DISPLAY PANE
 var elms = ['vidDescription', 'vid-overlay'];
 elms.forEach(function(elm) {
   window[elm] = document.getElementById(elm);
@@ -484,9 +497,9 @@ vidPlayer.on('playlistitem', function(){
    vidDescription.innerHTML = vidPlaylist[data + 0].description;
 });
     
-vidPlayer.on('play', () => {
-   bgMusic.pause(); 
-});
+//vidPlayer.on('play', () => {
+//   bgMusic.pause(); 
+//});
     
 //vidPlayer.on('play', bgMusicPause());
 //
@@ -550,13 +563,6 @@ const bgMusic = new Howl({
     src: ['audio/BgSprite_Marvel83_2049_Song.mp3'],
     volume: 0.5,
     loop: true,
-    onplay: function(){
-     //   bgMusic.volume(0.5);
-//        bgMusic.seek(saveSeek, id1);
-    },
-    onpause: function(){
-//        saveSeek = bgMusic.seek(id1);
-    }
 });
 
 
