@@ -446,7 +446,7 @@ li{list-style: none;}
     display: inline-block !important;
     float: left;
     width: inherit;
-    height: inherit;
+    height: 95vh !important;
 }
 
 #development-section{
@@ -465,13 +465,15 @@ li{list-style: none;}
 /*    z-index: UNSET !important;*/
 }
 
-
+.html5-video-player{
+    z-index: 1;
+}
 
 #design-section{
-    height: 70vh !important;
+    height: 80vh !important;
     position: absolute !important;
     width: 90% !important;
-    margin-top: 10vh;
+    margin-top: 62.38px;
 /*    margin-right: 5vw;*/
     overflow-x: hidden;
     overflow-y: hidden;
@@ -481,7 +483,7 @@ li{list-style: none;}
 
 .galleria{
     width: 95% !important;
-    height: 70vh !important;
+    height: 90vh !important;
     z-index: 3;
     position: absolute;
     float: none !important;
