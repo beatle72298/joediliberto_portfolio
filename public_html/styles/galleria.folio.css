@@ -4,6 +4,7 @@
     position:relative;
     font-family:arial,sans-serif;
     min-height: 18px;
+/*    max-width: 90vw;*/
 }
 .galleria-theme-folio img {
     -moz-user-select: none;

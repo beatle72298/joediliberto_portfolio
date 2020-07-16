@@ -74,6 +74,8 @@ h1{font-family: 'Press Start 2P', cursive; margin: 0px auto;}
 
 .side h2{display: block; position: absolute; width: 100%;}
 
+
+
 .side i{
     font-size: 100px;
     z-index: 500;
@@ -103,7 +105,7 @@ h1{font-family: 'Press Start 2P', cursive; margin: 0px auto;}
 
 
 .back-home.hover{transform: scale(1.05);}
-.back-home span{position: absolute; right: 25%; bottom: 35%; white-space: nowrap;}
+.back-home span{position: absolute; right: 25%; bottom: 35%; white-space: nowrap; z-index: 999!important;}
 .b2 span{left: 25%; right: unset;}
 
 .left{transition: .5s ease all;}
@@ -200,7 +202,6 @@ h1, h2, a {z-index: 500;}
 /*    border-bottom: 1px white dashed;*/
 /*    padding-bottom: .5em;*/
     margin: 0;
-    height: 
     
 }
 
@@ -234,7 +235,7 @@ a.active{
 .s3{
     display: inline-grid;
     grid-template-columns: 10% auto;
-/*    background: linear-gradient(to top left, black, black, rgba(0,0,0,0) 95%);*/
+    background: linear-gradient(to top left, black, black, rgba(0,0,0,0) 95%);
 }
 
 
@@ -317,6 +318,7 @@ li{list-style: none;}
     position: absolute !important;
     top: 0 !important;
     left: 0 !important;
+    z-index: 998 !important;
 }
 
 .video-player-wrap{
@@ -441,41 +443,51 @@ li{list-style: none;}
 }
  
 #slick-3 > div{
-    display: inline-block;
+    display: inline-block !important;
     float: left;
     width: inherit;
     height: inherit;
+}
+
+#development-section{
+    position: absolute !important;
+    background-color: purple;
+    height: 80% !important;
+    width: 92% !important;
+    left: unset !important;
+    margin-top: 62.38px;
 }
 
 .content-slide{
     padding: 40px;
     padding-bottom: 0px;
     font-size: 32px;
+/*    z-index: UNSET !important;*/
 }
 
 
 
 #design-section{
     height: 70vh !important;
-    position: absolute;
-    z-index: 0;
-    width: 90vw;
+    position: absolute !important;
+    width: 90% !important;
     margin-top: 10vh;
-    margin-right: 5vw;
+/*    margin-right: 5vw;*/
     overflow-x: hidden;
     overflow-y: hidden;
+    left: 0;
+    
 }
 
 .galleria{
     width: 95% !important;
     height: 70vh !important;
-    z-index: 1;
+    z-index: 3;
     position: absolute;
     float: none !important;
-    display: block;
     top: 0;
     overflow-y: scroll;
-    overflow-x: visible;
+    overflow-x: hidden;
 }
 
 /*
