@@ -84,12 +84,13 @@ Player.prototype = {
           // Stop the wave animation.
           wave.container.style.display = 'none';
           bar.style.display = 'block';
-          self.skip('next');
+//          self.skip('next');
         },
         onpause: function() {
           // Stop the wave animation.
           wave.container.style.display = 'none';
           bar.style.display = 'block';
+          
         },
         onstop: function() {
           // Stop the wave animation.
@@ -137,7 +138,6 @@ Player.prototype = {
 
     // Puase the sound.
     sound.pause();
-
     // Show the play button.
     playBtn.style.display = 'block';
     pauseBtn.style.display = 'none';
