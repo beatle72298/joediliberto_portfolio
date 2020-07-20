@@ -432,36 +432,7 @@ li{list-style: none;}
 
 /*--------------------------------------------------------------------------------SLIDE-3----DESIGN & DEVELOPMENT---------------------------------------------------------------------------------------------------*/
 
-.dd-menu{
-    height: 62.38px;
-}
 
-.slick-3{
-    display: flex;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    width: 90vw;
-    height: 95vh;
-    margin-left: 10vw;
-    position: absolute;
-    top: 5vh;
-}
- 
-#slick-3 > div{
-    display: inline-block !important;
-    float: left;
-    width: inherit;
-    height: 95vh !important;
-}
-
-#development-section{
-    position: absolute !important;
-    background-color: purple;
-    height: 80% !important;
-    width: 92% !important;
-    left: unset !important;
-    margin-top: 62.38px;
-}
 
 .content-slide{
     padding: 40px;
@@ -483,7 +454,6 @@ li{list-style: none;}
     overflow-x: hidden;
     overflow-y: hidden;
     left: 0;
-    
 }
 
 .galleria{
@@ -495,6 +465,7 @@ li{list-style: none;}
     top: 0;
     overflow-y: scroll;
     overflow-x: hidden;
+    right: 0;
 }
 
 /*
@@ -506,8 +477,114 @@ li{list-style: none;}
 }
 */
 
+.dd-menu{
+    height: 62.38px;
+}
 
+.textlink{
+    transition: .2s ease all;
+}
 
+.textlink:hover{
+    animation: var(--flicker-notransform);
+    letter-spacing: 5px;
+    transition: .2s ease all;
+}
+/*
+
+.webthumb:hover .textlink{
+    transform: scale(1.1);
+}
+*/
+
+.slick-3{
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 90vw;
+    height: 95vh;
+    margin-left: 10vw;
+    position: absolute;
+    top: 5vh;
+}
+ 
+#slick-3 > div{
+    display: inline-block !important;
+    float: left;
+    width: inherit;
+    height: 95vh !important;
+}
+
+#development-section{
+    position: absolute !important;
+    background-color: ;
+    height: 80% !important;
+    width: 85% !important;
+    left: unset !important;
+    margin-top: 62.38px;
+    padding: 40px;
+    text-align: right;
+    overflow-y: scroll;
+    padding-right: 125px;
+}
+
+.webcard{
+    width: 100%;
+    display: inline-block;
+    text-shadow: 1px 3px 3px black;
+/*    border: 1px dashed aliceblue;*/
+    text-align: center !important;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 2px dashed aliceblue;
+}
+
+.webtextwrap{
+    width: 75%;
+    margin: 0 auto;
+}
+
+.webthumb{
+    width: 60%;
+    height: 450px; 
+    background-size: cover; 
+    background-position: left center; 
+    display: block;
+    text-align: center;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    box-shadow: 2px 4px 5px black;
+}
+
+.webcard h2{
+    margin: 0;
+    text-decoration: underline;
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.webcard span{
+    margin: 0;
+    text-decoration: underline;
+    text-transform: uppercase;
+    line-height: 2;
+    font-weight: 700;
+    
+}
+
+.webcard p{
+    margin: 0;
+    line-height: 1;
+    font-size: 24px;
+}
+
+#dev_1{background-image: url(images/WebThumb_Nations.io.png);}
+#dev_2{background-image: url(images/WebThumb_nationsmerch.png);}
+#dev_3{background-image: url(images/WebThumb_joedmusic.png);}
+#dev_4{background-image: url(images/WebThumb_AntiqueScavenger.png);}
+#dev_5{background-image: url(images/WebThumb_whatstrending.png);}
 
 /*--------------------------------------------------------------------------------80s GRID---------------------------------------------------------------------------------------------------*/
 #center{
