@@ -95,7 +95,7 @@ h1{font-family: 'Press Start 2P', cursive; margin: 0px auto;}
 
 
 
-.hover{letter-spacing: 5px;transition: .3s ease all; animation: var(--flicker);}
+.hover{letter-spacing: 5px;transition: .3s ease all; animation: var(--flicker-notransform);}
 
 
 .glitch-transition{transition: .3s ease all; animation: var(--flicker);}
@@ -207,7 +207,7 @@ h1, h2, a {z-index: 500;}
 
 .audio-menu li, .dd-menu li{display: inline-block;padding: .8em 50px;}
 
-.audio-menu a:hover{animation:var(--flicker);}
+.audio-menu a:hover{animation:var(--flicker-notransform);}
 
 
 .slick-2{
