@@ -187,7 +187,7 @@ h1, h2, a {z-index: 500;}
 .s1{
     display: inline-grid;
     grid-template-columns: auto 10%;
-    background: linear-gradient(to top right, black, black, rgba(0,0,0,0) 95%);
+/*    background: linear-gradient(to top right, black, black, rgba(0,0,0,0) 95%);*/
 }
 
 .audio-menu, .dd-menu{
@@ -235,7 +235,7 @@ a.active{
 .s3{
     display: inline-grid;
     grid-template-columns: 10% auto;
-    background: linear-gradient(to top left, black, black, rgba(0,0,0,0) 95%);
+/*    background: linear-gradient(to top left, black, black, rgba(0,0,0,0) 95%);*/
 }
 
 
