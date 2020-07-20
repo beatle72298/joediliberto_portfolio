@@ -188,20 +188,54 @@ h1, h2, a {z-index: 500;}
     position: absolute;
     bottom: 350px;
     left: 25%;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
+/*    align-items: center;*/
     font-size: 40px;
 }
 
+#social-bar i{transition: .2s ease all;}
+
 #social-bar i:hover{
-    transform: scale(1.1);
+/*    transform: scale(1.1);*/
+    animation: var(--flicker-notransform);
+    transition: .2s ease all;
+}
+
+#social-bar i::after{
+    content: '';
+    color: rgba(0,0,0,0);
+    transition: .2s ease all;
+    display: block;
+    font-size: 18px;
     animation: var(--flicker-notransform);
 }
 
-#social-bar i:hover::after{
-    content: 'attr(title)';
+#dl:hover::after{
+   content: 'Download Resume';
+   font-size: 18px;
+   display: block;
+   font-family: 'Quantico';
+   color: rgba(255,255,255,1);
+   width: 50px;
+   transition: .2s ease all;
+}
+#li:hover::after{
+    content: 'LinkedIn';
+    font-size: 18px;
+    display: block;
+    font-family: 'Quantico';
+    color: rgba(255,255,255,1);
+    transition: .2s ease all;
 }
 
+#email:hover::after{
+    content: 'Email';
+    font-size: 18px;
+    display: block;
+    font-family: 'Quantico';
+    color: rgba(255,255,255,1);
+    transition: .2s ease all;
+}
 
 /*--------------------------------------------------------------------------------SLIDE-1--AUDIO-WORK-------------------------------------------------------------------------------------------------*/
 
