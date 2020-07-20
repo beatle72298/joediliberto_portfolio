@@ -22,7 +22,7 @@ $(document).ready(function(){
     });
     
     function fuckYou(){
-      $('#loader-wrap').slideUp(200).fadeOut(100);      
+      $('#loader-wrap').slideUp(200).fadeOut(100).remove($('#loader-wrap'));      
     };
     
 ///LOADER BAR ANIMATION 
