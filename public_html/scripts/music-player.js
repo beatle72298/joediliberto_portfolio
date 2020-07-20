@@ -59,7 +59,7 @@ Player.prototype = {
     } else {
       sound = data.howl = new Howl({
         src: ['./audio/' + data.file + '.mp3'],
-        html5: true, // Force to HTML5 so that the audio can stream in (best for large files).
+        html5: false, // Force to HTML5 so that the audio can stream in (best for large files).
         volume: 0.5,
         onplay: function() {
           // Display the duration.
@@ -433,7 +433,7 @@ var wave = new SiriWave({
   width: window.innerWidth,
   height: window.innerHeight * 0.3,
   cover: true,
-  speed: 0.3,
+  speed: 0.03,
   amplitude: 0.7,
   frequency: 2
 });
