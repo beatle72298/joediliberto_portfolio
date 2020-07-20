@@ -181,6 +181,27 @@ h1{font-family: 'Press Start 2P', cursive; margin: 0px auto;}
 
 h1, h2, a {z-index: 500;}
 
+#social-bar{
+    display: flex ;
+    width: 50%;
+    height: 50px;
+    position: absolute;
+    bottom: 350px;
+    left: 25%;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 40px;
+}
+
+#social-bar i:hover{
+    transform: scale(1.1);
+    animation: var(--flicker-notransform);
+}
+
+#social-bar i:hover::after{
+    content: 'attr(title)';
+}
+
 
 /*--------------------------------------------------------------------------------SLIDE-1--AUDIO-WORK-------------------------------------------------------------------------------------------------*/
 
