@@ -37,7 +37,7 @@ $(document).ready(function(){
     
     $('.slick-3').slick({
         slidesToShow: 1,
-        initialSlide: 0,
+        initialSlide: 1,
         rows: 1,
         slidesPerRow: 0,
         variableWidth: false,
