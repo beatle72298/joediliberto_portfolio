@@ -72,9 +72,6 @@ Player.prototype = {
           wave.container.style.display = 'block';
           bar.style.display = 'none';
           pauseBtn.style.display = 'block';
-          
-//          saveSeek = bgMusic.seek(id1);  
-//          bgMusic.pause();
             
         },
         onload: function() {
@@ -93,15 +90,6 @@ Player.prototype = {
           // Stop the wave animation.
           wave.container.style.display = 'none';
           bar.style.display = 'block';
-//          var isPlaying = player.playing();
-//            
-//            
-//          if (isPlaying == true){
-//            bgMusic.play();
-//          } else{
-//            bgMusic.pause();    
-//          }
-////          bgMusic.seek(saveSeek, id1);
         },
         onstop: function() {
           // Stop the wave animation.
@@ -381,9 +369,11 @@ pauseBtn.addEventListener('click', function() {
 });
 prevBtn.addEventListener('click', function() {
   player.skip('prev');
+  bgMusic.pause();
 });
 nextBtn.addEventListener('click', function() {
   player.skip('next');
+  bgMusic.pause();
 });
 waveform.addEventListener('click', function(event) {
   player.seek(event.clientX / window.innerWidth);
