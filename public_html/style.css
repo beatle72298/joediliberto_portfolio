@@ -959,6 +959,7 @@ li{list-style: none;}
   }
 }
 
+/*
 .scanlines {
   pointer-events: none;
   animation: 0.2s normal parpadeoScanlines infinite;
@@ -971,6 +972,7 @@ li{list-style: none;}
   background-size: 100% 0.35rem;
   z-index: 10000;
 }
+*/
 
 
 
