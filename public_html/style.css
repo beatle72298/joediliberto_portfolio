@@ -937,7 +937,6 @@ li{list-style: none;}
 
 /*--------------------------------------------------------------------------------TV-SCANLINES---------------------------------------------------------------------------------------------------*/
 
-/*
 .marco {
   pointer-events: none;
   z-index: 10001;
@@ -959,9 +958,7 @@ li{list-style: none;}
     opacity: 0.8;
   }
 }
-*/
 
-/*
 .scanlines {
   pointer-events: none;
   animation: 0.2s normal parpadeoScanlines infinite;
@@ -974,7 +971,6 @@ li{list-style: none;}
   background-size: 100% 0.35rem;
   z-index: 10000;
 }
-*/
 
 
 
