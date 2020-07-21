@@ -718,13 +718,11 @@ li{list-style: none;}
    animation-duration: 6s;
 }
 
-/*
 @-webkit-keyframes chrome_effect {
   0% {background-position:-680px 0;}
   10% {background-position:420px 0;}
   100% {background-position:420px 0;}
 }
-*/
 
 
 .subtitle{
@@ -760,7 +758,7 @@ li{list-style: none;}
   box-shadow: aliceblue 0px 0px 100px;
   animation: sunglow 30s ease infinite alternate forwards;
   display: inline-flex;
-  margin-left: -10%;
+  margin-left: -55px;
 }
 
 /*
@@ -829,7 +827,6 @@ li{list-style: none;}
 }
 
 
-/*
 .cliff1{
   position:absolute;
   height:100%;
@@ -845,7 +842,6 @@ li{list-style: none;}
   background: linear-gradient(25deg, rgb(40, 170, 220) 3vmax, transparent 2.7vmax) -31px 0 / 7.3vw 100%,
               linear-gradient(-40deg, rgb(40, 160, 220) 2.55vmax, transparent 1.9vmax) -30px 0 / 7.3vw 100%;
 }
-*/
 
 
 
@@ -887,13 +883,12 @@ li{list-style: none;}
 }
 
 
-/*
 #grid-glow{
     transform:perspective(55vmin) rotateX(80deg) scaleX(1.0) translateX(5px);  
     -webkit-filter: url(#svgblur);
     filter: url(#svgblur);
     mix-blend-mode: screen;
-
+    opacity: .8;
 }
 
 #grid-glow .grid-x{background: repeating-linear-gradient(
@@ -905,7 +900,6 @@ li{list-style: none;}
   );
     
 }
-*/
 
 
 .grid-x,.grid-y{
