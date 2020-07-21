@@ -829,14 +829,15 @@ li{list-style: none;}
 }
 
 
+/*
 .cliff1{
   position:absolute;
   height:100%;
   width:100%;
   background: linear-gradient(-45deg, rgb(0, 170, 220) 2.6vmax, transparent 2.7vmax) 1px 0 / 6.2vw 100%,
               linear-gradient(60deg, rgb(0, 100, 220) 1.8vmax, transparent 1.9vmax) 0 0 / 6.2vw 100%;
-  
 }
+
 .cliff2{
   position:absolute;
   height:100%;
@@ -844,6 +845,7 @@ li{list-style: none;}
   background: linear-gradient(25deg, rgb(40, 170, 220) 3vmax, transparent 2.7vmax) -31px 0 / 7.3vw 100%,
               linear-gradient(-40deg, rgb(40, 160, 220) 2.55vmax, transparent 1.9vmax) -30px 0 / 7.3vw 100%;
 }
+*/
 
 
 
@@ -885,6 +887,7 @@ li{list-style: none;}
 }
 
 
+/*
 #grid-glow{
     transform:perspective(55vmin) rotateX(80deg) scaleX(1.0) translateX(5px);  
     -webkit-filter: url(#svgblur);
@@ -902,6 +905,7 @@ li{list-style: none;}
   );
     
 }
+*/
 
 
 .grid-x,.grid-y{
@@ -943,7 +947,7 @@ li{list-style: none;}
   height: 100%;
   background-repeat: no-repeat;
   background-size: 100%;
-  background-image: url('http://wizard.ae.krakow.pl/~jb/qaop/tv.png')
+  background-image: url('http://wizard.ae.krakow.pl/~jb/qaop/tv.png');
 }
 
 @keyframes parpadeoScanlines {
