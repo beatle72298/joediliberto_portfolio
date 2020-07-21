@@ -756,20 +756,25 @@ li{list-style: none;}
   mix-blend-mode: hard-light;
 /*  animation: var(--box-flicker);*/
   box-shadow: aliceblue 0px 0px 100px;
-  animation: sunglow 30s ease infinite alternate forwards;
+  animation: sunglow-2 30s ease infinite alternate forwards;
   display: inline-flex;
   margin-left: -55px;
 }
 
-/*
 @keyframes sunglow{
     0%{box-shadow: #FFD800 0px 0px 100px;}, 
-    25%{box-shadow: #F59440 0px 0px 100px;}, 
-    50%{box-shadow: magenta 0px 0px 100px;},
+    25%{box-shadow: #F59440 0px 0px 100px;},
     75%{box-shadow: crimson 0px 0px 100px;},
     100%{box-shadow: aliceblue 0px 0px 100px;},
 }
-*/
+
+@keyframes sunglow-2{
+    0%{box-shadow: aliceblue 0px 0px 100px;}, 
+    25%{box-shadow: aliceblue 0px 0px 75px;},
+    50%{box-shadow: aliceblue 2px 10px 50px},
+    75%{box-shadow: aliceblue 0px 0px 75px;},
+    100%{box-shadow: aliceblue 0px 0px 100px;},
+}
 
 .midnightHeart::before{
   content:"";
@@ -869,7 +874,14 @@ li{list-style: none;}
 }
 
 .gridInner{
-  animation:animatedGrid 20s linear infinite;
+  animation:animatedGrid 10s linear infinite;
+}
+
+#car{
+    position: absolute;
+    z-index: 2;
+    width: 200px;
+
 }
 
 .midnightGrid::after{
@@ -995,6 +1007,7 @@ canvas {
 /*  background: rgba(0,0,0,0);*/
 }
 
+/*
 .stars {
   position: absolute;
   top: 50%;
@@ -1065,6 +1078,7 @@ canvas {
     opacity: 0;
   }
 }
+*/
 
 
 

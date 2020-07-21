@@ -1,8 +1,62 @@
 
 
 $(document).ready(function(){  
+	var car = document.getElementById("car");	
+    document.addEventListener("mousemove", getMouse); 
+	   var carpos = {x:0,y:0};   
+        
+		setInterval(followMouse, 50);
+		
     
-    
+		var mouse = {x:0, y:0}; //mouse.x, mouse.y
+		
+		var dir = "right";
+		function getMouse(e){
+			mouse.x = e.pageX;
+			mouse.y = e.pageY;
+        //direction change
+        if(mouse.x > carpos.x){
+          dir = "right";
+        } else {
+          dir = "left";
+        }
+            
+//        console.log(mouse);
+            
+		}
+		
+		function followMouse(){
+			//1. find distance X , distance Y
+			var distX = mouse.x - carpos.x;
+			var distY = mouse.y - carpos.y;
+			//Easing motion 
+			carpos.x += distX/5;
+			carpos.y += distY/2;
+			
+            var carScale = 'scale('+ mouse.y/300 +')';
+            //car.style.transform = '"'+ carScale +'"';
+            car.style.transform = carScale;
+            
+            
+            
+            
+			car.style.left = carpos.x + "px";
+			car.style.top = carpos.y + "px";
+            
+            
+            
+            console.log(carScale);
+            
+            if (mouse.y < 450){
+                car.style.top = 450 + 'px';
+                car.style.transform = "scale(1.5)";
+            } else if(mouse.y > 700){
+                //car.style.top = 700 + 'px';
+            } else {
+                //car.style.top = carpos.y + 'px';
+            }
+            
+        }
     
     
     $('.slick').slick({
