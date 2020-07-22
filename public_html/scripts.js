@@ -21,31 +21,53 @@ $(document).ready(function(){
 		
 		var dir = "right";
 		
+        
+    
+    
         function getMouse(e){
 			mouse.x = e.pageX;
 			mouse.y = e.pageY;
-        
             
-        clearTimeout();  
-        setTimeout(function(){
-                $('#car').removeClass('do-transition');    
-        },1000);
-            
-        $('#car').addClass('do-transition');    
-          
-//            setTimeout(function(){
-//                car.removeClass('do-transition');
-//            }, 500);
-            
-            
-//        console.log(mouse);
-		}
+         //var initX;
 		
+         var lastX = 0;
+         var diffX = 0;
     
-		function followMouse(){
+                
+        //diffX = event.lastX - mouse.x;
+        
+        setTimeout(getMouseStart, 400);
+        function getMouseStart(){
+            initX = mouse.x;
+            //console.log('initX:' + initX);
+            console.log('getMouseStart() FIRED!!')
+        };
             
+        console.log('initX:' + initX);
+        lastX = e.pageX;        
+        diffX = initX - lastX;
             
-            
+        console.log('lastX:' + lastX);
+        console.log('diffX:' + diffX);
+        
+        //clearInterval();
+        if(diffX >= 550){
+            $('#car').addClass('do-transition');
+            setTimeout(function(){
+            $('#car').removeClass('do-transition');    
+            },600);    
+        } else if(diffX <= -550){
+            $('#car').addClass('do-transition');
+            setTimeout(function(){
+            $('#car').removeClass('do-transition');    
+            },600);   
+        };
+        //clearTimeout();
+    }
+   
+    
+    
+		function followMouse(){       
             
 			//1. find distance X , distance Y
 			var distX = mouse.x - carpos.x;
@@ -66,87 +88,17 @@ $(document).ready(function(){
             
             
             
-            console.log(carScale);
+            //console.log(carScale);
             
             if (mouse.y < 450){
-                car.style.top = 450 + 'px';
+                car.style.top = 460 + 'px';
                 car.style.transform = "scale(1.5)";
             } else if(mouse.y > 700){
-                //car.style.top = 700 + 'px';
+                car.style.top = 700 + 'px';
             } else {
                 //car.style.top = carpos.y + 'px';
             }    
         }
-
-//        $(window).on('mousemove', moveBox);
-//        var $box = $('.box'),
-//            inter = 4,
-//            speed = 100;
-//            
-//            
-//        function moveBox(e) {
-//            TweenMax.killTweensOf();
-//            
-//            var xbg = (e.pageX), ybg = (e.pageY);
-//            
-//            $box.each(function(index, val) {   
-//	           
-//                TweenMax.to(
-//                
-//                $(this),1,{
-//          
-//                x:xbg+'px',y:ybg+'px',
-//          
-//                delay:0+(index/300)
-//                
-//                });
-//                
-//            });
-//        }
-//            $box.each(function(index, val) {
-//                index = index + 1;
-//                TweenMax.set(
-//                    $(this),{
-//                    autoAlpha: 0.5 - (0.02 * index),
-//                    //autoAlpha: 0.02,
-//                    delay:0
-//                });
-//            });
-//        TweenMax.set($('.box:nth-child(4)'),{autoAlpha: 1});
-
-
-
-
-
-
-    
-    
-    
-    
-    
-    
-    
-//        var $box = $('.box'),
-//        inter = 10,
-//        speed = 0;
-//
-//        function moveBox(e) {
-//        //TweenMax.killTweensOf();
-//        $box.each(function(index, val) {
-//        TweenLite.to(
-//            $(this), 0.05, 
-//            {
-//            css: { left: e.pageX, top: e.pageY},
-//             delay:0+(index/750)});
-//         });
-//        ;}
-//
-//        $(window).on('mousemove', moveBox);
-//
-//        $box.each(function(index, val) {
-//            index = index + 1;
-//            TweenMax.set($(this),{autoAlpha: 1,delay:0});});
-//        TweenMax.set( $('.text:nth-child(11)'), {autoAlpha: 1,delay: 0});
 
     
     
@@ -865,7 +817,10 @@ $('.dd-menu a').mouseenter(function(){
 
 $('.audio-menu a').mouseenter(function(){
    sprites.play('click1');
-    
+});
+
+$('#social-bar i').mouseenter(function(){
+   sprites.play('click1');
 });
 
 
