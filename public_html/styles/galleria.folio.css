@@ -1,5 +1,11 @@
 #galleria-loader{height:1px!important}
 
+/*
+.galleria-image{
+    background: aliceblue !important;
+}
+*/
+
 .galleria-theme-folio {
     position:relative;
     font-family:arial,sans-serif;
@@ -13,6 +19,7 @@
 }
 .galleria-theme-folio .galleria-stage {
     background:#000;
+/*    background: aliceblue;*/
     top:0; bottom:0; left:0; right:0;
     visibility: hidden;
     position: absolute;

@@ -32,23 +32,20 @@ $(document).ready(function(){
 		
          var lastX = 0;
          var diffX = 0;
-    
-                
-        //diffX = event.lastX - mouse.x;
         
         setTimeout(getMouseStart, 400);
         function getMouseStart(){
             initX = mouse.x;
             //console.log('initX:' + initX);
-            console.log('getMouseStart() FIRED!!')
+            //console.log('getMouseStart() FIRED!!')
         };
             
-        console.log('initX:' + initX);
+        //console.log('initX:' + initX);
         lastX = e.pageX;        
         diffX = initX - lastX;
             
-        console.log('lastX:' + lastX);
-        console.log('diffX:' + diffX);
+        //console.log('lastX:' + lastX);
+        //console.log('diffX:' + diffX);
         
         //clearInterval();
         if(diffX >= 550){
@@ -407,8 +404,8 @@ var vidPlaylist = [{
     mycredits: 'Production Sound Mixer' + sp + 'Post-Production Sound Supervisor' + br + 'Post-Production Sound Editor' + sp + 'Post-Production Sound Mixer' + br + 'Foley Supervisor',
     duration: 520,
     sources: [{
-        src: 'video/Jodie CONFORM_071020.mp4',
-        type: 'video/mp4'
+        src: 'https://youtu.be/OJ6DYzNNPoM',
+        type: 'video/youtube'
     }],
     poster: 'images/VidThumb_Jodie1.jpg',
     thumbnail: [{
@@ -499,8 +496,8 @@ var vidPlaylist = [{
     mycredits: 'Motion Graphics Designer/Editor' +sp+ 'Project Manager',
     duration: 2,
     sources: [{
-        src: 'video/Logo.mp4',
-        type: 'video/mp4'
+        src: 'https://youtu.be/Jnt6kPjsYcU',
+        type: 'video/youtube'
     }],
     poster: 'images/VidThumb_TKS.png',
     thumbnail: [{
