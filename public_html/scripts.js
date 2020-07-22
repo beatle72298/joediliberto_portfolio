@@ -1,31 +1,52 @@
 
 
 $(document).ready(function(){  
-	var car = document.getElementById("car");	
+	   
+        
+
+    
+    
+    
+    var car = document.getElementById("car");
+    
     document.addEventListener("mousemove", getMouse); 
-	   var carpos = {x:0,y:0};   
+	   
+        var carpos = {x:0,y:0};   
         
 		setInterval(followMouse, 50);
 		
-    
+        
+        
 		var mouse = {x:0, y:0}; //mouse.x, mouse.y
 		
 		var dir = "right";
-		function getMouse(e){
+		
+        function getMouse(e){
 			mouse.x = e.pageX;
 			mouse.y = e.pageY;
-        //direction change
-        if(mouse.x > carpos.x){
-          dir = "right";
-        } else {
-          dir = "left";
-        }
+        
+            
+        clearTimeout();  
+        setTimeout(function(){
+                $('#car').removeClass('do-transition');    
+        },1000);
+            
+        $('#car').addClass('do-transition');    
+          
+//            setTimeout(function(){
+//                car.removeClass('do-transition');
+//            }, 500);
+            
             
 //        console.log(mouse);
-            
 		}
 		
+    
 		function followMouse(){
+            
+            
+            
+            
 			//1. find distance X , distance Y
 			var distX = mouse.x - carpos.x;
 			var distY = mouse.y - carpos.y;
@@ -54,9 +75,79 @@ $(document).ready(function(){
                 //car.style.top = 700 + 'px';
             } else {
                 //car.style.top = carpos.y + 'px';
-            }
-            
+            }    
         }
+
+//        $(window).on('mousemove', moveBox);
+//        var $box = $('.box'),
+//            inter = 4,
+//            speed = 100;
+//            
+//            
+//        function moveBox(e) {
+//            TweenMax.killTweensOf();
+//            
+//            var xbg = (e.pageX), ybg = (e.pageY);
+//            
+//            $box.each(function(index, val) {   
+//	           
+//                TweenMax.to(
+//                
+//                $(this),1,{
+//          
+//                x:xbg+'px',y:ybg+'px',
+//          
+//                delay:0+(index/300)
+//                
+//                });
+//                
+//            });
+//        }
+//            $box.each(function(index, val) {
+//                index = index + 1;
+//                TweenMax.set(
+//                    $(this),{
+//                    autoAlpha: 0.5 - (0.02 * index),
+//                    //autoAlpha: 0.02,
+//                    delay:0
+//                });
+//            });
+//        TweenMax.set($('.box:nth-child(4)'),{autoAlpha: 1});
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+//        var $box = $('.box'),
+//        inter = 10,
+//        speed = 0;
+//
+//        function moveBox(e) {
+//        //TweenMax.killTweensOf();
+//        $box.each(function(index, val) {
+//        TweenLite.to(
+//            $(this), 0.05, 
+//            {
+//            css: { left: e.pageX, top: e.pageY},
+//             delay:0+(index/750)});
+//         });
+//        ;}
+//
+//        $(window).on('mousemove', moveBox);
+//
+//        $box.each(function(index, val) {
+//            index = index + 1;
+//            TweenMax.set($(this),{autoAlpha: 1,delay:0});});
+//        TweenMax.set( $('.text:nth-child(11)'), {autoAlpha: 1,delay: 0});
+
     
     
     $('.slick').slick({

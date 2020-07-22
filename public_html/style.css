@@ -881,8 +881,56 @@ li{list-style: none;}
     position: absolute;
     z-index: 2;
     width: 200px;
-
+    
 }
+
+
+@keyframes motion-blur {
+  0% {
+    filter: url(#blur0);
+/*    transform: scale(1, 1);*/
+  }
+  15% {
+    filter: url(#blur1);
+/*    transform: scale(1, 0.98);*/
+  }
+  30% {
+    filter: url(#blur2);
+/*    transform: scale(1, 0.93);*/
+  }
+  45% {
+    filter: url(#blur3);
+/*    transform: scale(1.1, 0.9);*/
+  }
+  60% {
+    filter: url(#blur4);
+/*    transform: scale(1.2, 0.88);*/
+  }
+  75%,
+  100% {
+    filter: url(#blur5);
+/*    transform: scale(1.35, 0.85);*/
+  }
+}
+
+.do-transition {
+  animation: 
+    motion-blur 0.1s linear forwards,
+    motion-blur 0.4s linear reverse forwards 0.1s;
+    
+}
+
+#svg-filter-2{
+    position: absolute;
+    top: 0;
+    display: none;
+/*
+    width: 0px;
+    height: 0px;
+*/
+    z-index: 5;
+}
+
 
 .midnightGrid::after{
   content:"";
