@@ -59,7 +59,8 @@ Player.prototype = {
     } else {
       sound = data.howl = new Howl({
         src: ['./audio/' + data.file + '.mp3'],
-        html5: false, // Force to HTML5 so that the audio can stream in (best for large files).
+        preload: true,
+        html5: true, // Force to HTML5 so that the audio can stream in (best for large files).
         volume: 0.5,
         onplay: function() {
           // Display the duration.
@@ -78,7 +79,8 @@ Player.prototype = {
           // Start the wave animation.
           wave.container.style.display = 'block';
           bar.style.display = 'none';
-          loading.style.display = 'none';
+          loading.style.display = 'none';    
+            
         },
         onend: function() {
           // Stop the wave animation.
@@ -90,7 +92,10 @@ Player.prototype = {
           // Stop the wave animation.
           wave.container.style.display = 'none';
           bar.style.display = 'block';
-          
+          //console.log('musicPlaying' + bgMusic.playing());
+          if (bgMusic.playing() == false){
+              bgMusic.play();
+          }
         },
         onstop: function() {
           // Stop the wave animation.
@@ -141,6 +146,11 @@ Player.prototype = {
     // Show the play button.
     playBtn.style.display = 'block';
     pauseBtn.style.display = 'none';
+    
+    
+        
+    
+      
   },
 
   /**
@@ -149,7 +159,7 @@ Player.prototype = {
    */
   skip: function(direction) {
     var self = this;
-
+      
     // Get the next track based on the direction of the track.
     var index = 0;
     if (direction === 'prev') {
@@ -165,6 +175,7 @@ Player.prototype = {
     }
 
     self.skipTo(index);
+    
   },
 
   /**
@@ -301,7 +312,7 @@ var player = new Player([
     howl: null
   },
   {
-    title: 'The Underside of Soul [Lucifer-s Lost Verse]',
+    title: "The Underside of Soul [Lucifer's Lost Verse]",
     file: '17 The Underside Of Soul [Lucifer-s Lost Verse]',
     artist: 'Joe Diliberto',
     album: 'Solaris (2018) | LP',
