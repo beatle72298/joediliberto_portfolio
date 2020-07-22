@@ -150,6 +150,7 @@ h1{font-family: 'Press Start 2P', cursive; margin: 0px auto;}
 
 #mute-btn:hover{
     cursor: pointer;
+    animation: var(--flicker-notransform);
 }
 
 .muted #mute-btn{
