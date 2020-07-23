@@ -27,7 +27,7 @@ function get_screen_size() {
 function init() {
     for (var t = 0; n > t; t++) star[t] = new Array(5), star[t][0] = Math.random() * w * 2 - 2 * x, star[t][1] = Math.random() * h * 2 - 2 * y, star[t][2] = Math.round(Math.random() * z), star[t][3] = 0, star[t][4] = 0;
     var r = $i("starfield");
-    r.style.position = "absolute", r.width = w, r.height = h, context = r.getContext("2d"), context.fillStyle = "rgb(0,0,0)", context.strokeStyle = "rgb(255,255,255)"
+    r.style.position = "absolute", r.width = w, r.height = h, context = r.getContext("2d"), context.fillStyle = "rgba(0,0,0,1)", context.strokeStyle = "rgb(255,255,255)"
 }
 function anim() {
     mouse_x = cursor_x - x, mouse_y = cursor_y - y, context.fillRect(0, 0, w, h);

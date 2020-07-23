@@ -727,8 +727,8 @@ $('#slick-3').on('beforeChange', function(event, slick, currentSlide, nextSlide)
 
 
  bgMusic = new Howl({
-//   src: ['audio/Bg_Shyguys_Pursuit_1.mp3'],
-    src: ['audio/BgSprite_Marvel83_2049_Song.mp3'],
+   src: ['audio/Bg_Shyguys_Pursuit_1.mp3'],
+//    src: ['audio/BgSprite_Marvel83_2049_Song.mp3'],
     volume: 0.5,
     loop: true,
 });  
