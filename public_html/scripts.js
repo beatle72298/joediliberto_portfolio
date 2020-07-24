@@ -589,8 +589,21 @@ $('.ytp-pause-overlay').hide();
 $('.ytp-pause-overlay').addClass('none');
 $('.ytp-pause-overlay').addClass('none');
 
-    
-  
+function horizPlaylist(){
+    if (x.matches){
+        vidPlayer.playlistUi({horizontal: false});
+        $('.vjs-playlist').removeClass('vjs-playlist-horizontal');
+    } else {
+        vidPlayer.playlistUi({horizontal: true});
+        $('.video-player-wrap').append($('.vjs-playlist'));
+    }
+}
+
+var x = window.matchMedia('(min-width: 1000px)')
+horizPlaylist(x)
+x.addListener(horizPlaylist)
+
+//setInterval(horizPlaylist, 1000);
 
 
 // VIDEO PLAYER INFO HOVER
@@ -616,6 +629,7 @@ $('#infobtn').hover(
 $('#infobtn').click(function(){
     $('#vid-overlay').toggleClass('infoclick');
     $('#vid-overlay.infoclick').slideDown(200);
+    //vidPlayer.playlistUi({horizontal: false});
 });  
     
 

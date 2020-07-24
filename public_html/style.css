@@ -430,19 +430,20 @@ li{list-style: none;}
 
 #vid-info{
 /*    background-color: aquamarine;*/
-    width: 74%;
+    width: 76%;
     height: 76%;
     left: 26%;
     position: absolute;
     pointer-events: none;
     z-index: 5;
     padding: 50px;
+    padding-right: 0;
     text-shadow: 1px 1px 5px black;
     overflow-y: hidden;
 }
 
 #vid-overlay{
-    width: 81%;
+    width: inherit;
     height: 88%;
     top: 0;
     left: 0;
@@ -451,7 +452,7 @@ li{list-style: none;}
     position: absolute;
     pointer-events: none;
     padding-top: 100px;
-    padding-left: 75px;
+    padding-left: 80px;
     display: none;
 }
 
@@ -513,7 +514,7 @@ li{list-style: none;}
 #design-section{
     height: 90vh !important;
     position: absolute !important;
-    width: 90% !important;
+/*    width: 90% !important;*/
     margin-top: 62.38px;
 /*    margin-right: 5vw;*/
     overflow-x: hidden;
@@ -660,14 +661,15 @@ li{list-style: none;}
 #development-section{
     position: absolute !important;
     background-color: ;
-    height: 80% !important;
-    width: 85% !important;
+    height: 85%;
+    width: 90% !important;
     left: unset !important;
     margin-top: 62.38px;
     padding: 40px;
     text-align: right;
     overflow-y: scroll;
     padding-right: 125px;
+    right: 0;
 }
 
 .webcard{
@@ -1172,7 +1174,16 @@ canvas {
 /*  background: rgba(0,0,0,0);*/
 }
 
-
+/*
+.menu-wrap{
+    width: 110%;
+    text-align: center;
+    display: flex;
+    justify-items: center;
+    margin-left: -10%;
+    
+}
+*/
 
 
 
@@ -1226,6 +1237,13 @@ main{
 
 /*--------------------------------------------------------------------------------MOBILE OPTIMIZATION---------------------------------------------------------------------------------------------------*/
 
+@media screen and (max-width: 1900px){
+    #vid-overlay{
+        padding-left: 0px;
+    }
+}
+
+
 @media screen and (max-width: 1765px){
     #hero-title{
 /*        transform: scale(1.1);*/
@@ -1252,12 +1270,7 @@ main{
         width: 120%;
         right: 0px;
     }
-/*
-    #center h1{
-        width: 150%;
-        left: -25%;
-    }
-*/
+
 }
 
 
@@ -1282,6 +1295,11 @@ main{
     
     .c4 h2{width: unset;}
     
+    .webthumb{
+        width: 75%;
+        height: 300px;
+    }
+    
 }
 
 @media screen and (max-width: 1200px){
@@ -1289,7 +1307,19 @@ main{
         width: 200%;
         left: -50%;
     }
+    
+    #development-section{
+        width: unset !important;
+    }
 }
+
+@media screen and (max-width: 1000px){
+    .video-player-wrap{
+        grid-template-columns: unset;
+        grid-template-rows: 75% 25%;
+    }
+}
+
 
 @media screen and (max-width: 975px){
     #hero-title{
@@ -1300,7 +1330,40 @@ main{
         font-size: 80px;
     }
     
+    #development-section{
+        padding-right: unset;
+        padding-left: unset;
+    }
 }
+
+@media screen and (max-width: 900px){
+    #design-section{
+       left: unset !important;
+       right: 0;
+    
+    }
+}
+
+
+
+
+@media screen and (max-width: 800px){
+    #development-section{
+        width: 100% !important;
+    }
+    
+    .webcard h2{
+        font-size: 34px;
+    }
+    
+    .dd-menu{
+        margin-left: -15%;
+        width: unset;
+    }
+}
+
+
+
 
 @media screen and (max-width: 750px){
     #hero-title{
@@ -1316,6 +1379,12 @@ main{
         margin-top: 30px;
         right: 0vw;
     }
+    
+    .galleria-theme-folio .galleria-thumbnails .galleria-image{
+        max-height: 200px !important;
+        max-width: 150px !important;
+    }
+    
 }
 
 
@@ -1344,10 +1413,35 @@ main{
     }
     
     
+    .dd-menu{
+        width: 100%;
+    }
+    
+}
+
+
+@media screen and (max-width: 650px){
+    .dd-menu li{
+        padding: .8em 30px;
+    }
+    
+    .webthumb{
+        height: 200px;
+        width: 70%;
+    }
+    
 }
 
 
 @media screen and (max-width: 600px){
+    
+    .dd-menu li, .audio-menu li{
+        font-size: 20px;
+        padding: 1em 30px;
+    }
+    
+    
+    
     #hero-title{
         font-size: 84px;
     }
@@ -1406,5 +1500,13 @@ main{
     #waveform{width: 111%;}
     .side{ z-index: 999;}
     
-    #music-section.content-slide{padding: 0}
+    #music-section.content-slide{padding: 0;}
+    
+    .dd-menu{
+        margin-left: -19%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    
 }
