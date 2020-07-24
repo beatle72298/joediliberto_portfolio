@@ -390,7 +390,7 @@ li{list-style: none;}
     width: 100%;
     height: 90%;
     display: inline-grid;
-    grid-template-columns: 25% auto 5%;
+    grid-template-columns: 25% auto 40px;
     padding-top: 0;
     box-sizing: border-box;
     overflow-y: hidden;
@@ -404,6 +404,10 @@ li{list-style: none;}
 /*    border: 2px rgba(100,100,100, .9) dashed;*/
     border-right: none;
     overflow-y: hidden;
+/*    position: absolute;*/
+    left: 0;
+    top: 0;
+    z-index: 1;
 }
 
 .vjs-playlist{
@@ -428,32 +432,30 @@ li{list-style: none;}
 /*    clip: rect(50px,0px,500px, 0px);*/
 }
 
-#vid-info{
-/*    background-color: aquamarine;*/
-    width: 76%;
-    height: 76%;
-    left: 26%;
-    position: absolute;
-    pointer-events: none;
-    z-index: 5;
-    padding: 50px;
-    padding-right: 0;
-    text-shadow: 1px 1px 5px black;
-    overflow-y: hidden;
+#vid-wrap{
+    width: inherit;
+    height: 100%;
+    position: relative;
 }
 
 #vid-overlay{
+    box-sizing: border-box;
     width: inherit;
-    height: 88%;
+    height: 100%;
     top: 0;
     left: 0;
     padding: 50px;
     background-color: rgba(30, 20, 90,.6);
     position: absolute;
     pointer-events: none;
-    padding-top: 100px;
-    padding-left: 80px;
     display: none;
+    z-index: 2;
+}
+
+.info-wrap{
+    height: 100%;
+    width: 100%;
+    display: block;
 }
 
 #vidName{text-transform: uppercase; font-weight: 900; text-decoration: underline;}
@@ -495,6 +497,9 @@ li{list-style: none;}
 
 
 #myvidCredits{word-break: keep-all;}
+.myCreditsWrap{
+    margin-top: 1.5em;
+}
 
 /*--------------------------------------------------------------------------------SLIDE-3----DESIGN & DEVELOPMENT---------------------------------------------------------------------------------------------------*/
 
@@ -1237,11 +1242,7 @@ main{
 
 /*--------------------------------------------------------------------------------MOBILE OPTIMIZATION---------------------------------------------------------------------------------------------------*/
 
-@media screen and (max-width: 1900px){
-    #vid-overlay{
-        padding-left: 0px;
-    }
-}
+
 
 
 @media screen and (max-width: 1765px){
@@ -1311,13 +1312,26 @@ main{
     #development-section{
         width: unset !important;
     }
-}
-
-@media screen and (max-width: 1000px){
-    .video-player-wrap{
+        .video-player-wrap{
         grid-template-columns: unset;
         grid-template-rows: 75% 25%;
     }
+    .vjs-playlist{
+        direction: ltr;
+    }
+    
+    .vjs-playlist-horizontal .vjs-playlist-item{
+        width: 50%;
+    }
+    
+    #vid-overlay{
+        height: 150%;
+    }
+}
+
+@media screen and (max-width: 1000px){
+
+    
 }
 
 
@@ -1340,7 +1354,10 @@ main{
     #design-section{
        left: unset !important;
        right: 0;
-    
+    }
+     #myvidCredits{
+        font-size: 24px;
+        line-height: 1.5em;
     }
 }
 
@@ -1416,6 +1433,9 @@ main{
     .dd-menu{
         width: 100%;
     }
+    .myCreditsWrap{
+        margin-top: .5em;
+    }
     
 }
 
@@ -1430,16 +1450,30 @@ main{
         width: 70%;
     }
     
+    #vidDescription{
+        margin: 0;
+    }
+    
+    #myvidCredits{
+        margin: 0;
+    }
+    
 }
 
 
 @media screen and (max-width: 600px){
+    .vjs-playlist-horizontal .vjs-playlist-item{
+        width: 75%;
+    }
     
     .dd-menu li, .audio-menu li{
         font-size: 20px;
         padding: 1em 30px;
     }
     
+    #film-section{
+        padding: 20px;
+    }
     
     
     #hero-title{
@@ -1504,6 +1538,10 @@ main{
     
     .dd-menu{
         margin-left: -19%;
+    }
+    
+    #vidDescription, #myvidCredits{
+        font-size: 18px;
     }
 }
 

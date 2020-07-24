@@ -172,27 +172,34 @@
                 <div id="film-section" class="content-slide">
                     <div class="video-player-wrap">
                     
-                    <div id="vid-info">
+                    
+                    
+                            <div class="vjs-playlist"></div>
+                    
+                            <div id="vid-wrap">
+                        
                         <i id="infobtn" class="fa fa-info"></i>
+    
                         <div id="vid-overlay">
-                        <span id="vidName"></span>
-                        <span id="vidYear">Year:</span><br>
-                        <span>Genre:</span>
-                        <span id="vidGenre"></span><br>
+                            <div class="info-wrap">
+                                <div class="info-head">
+                                    <span id="vidName"></span>
+                                    <span id="vidYear">Year:</span><br>
+                                    <span>Genre:</span>
+                                    <span id="vidGenre"></span><br>
+                                    <span id="vidCredits"></span><br><br>
+                                </div>
                             
-                        <span id="vidCredits"></span><br><br>
-                        
-                            
-                        <span id="descheading" class="vidheading">DESCRIPTION:</span>
-                        <p id="vidDescription"></p><br>                
-                        <span class="vidheading">MY CREDITS:</span><br>
-                        <span id="myvidCredits">MY CREDITS:</span>
+                                <span id="descheading" class="vidheading">DESCRIPTION:</span>
+                                <p id="vidDescription"></p>
+                             
+                                <div class="myCreditsWrap">
+                                    <span class="vidheading">MY CREDITS:</span>
+                                    <p id="myvidCredits">12345</p>
+                                </div>
+                            </div>
                         </div>
-                        
-                    </div>  
-                    
-                    <div class="vjs-playlist"></div>
-                    
+                      
                     
                     <video 
                            id="video-player" 
@@ -202,7 +209,7 @@
                            width=""
                            height=""                       
                            data-setup='{}'
-                           >
+                    >
                         
 <!--data-setup='{"techOrder": ["youtube"],]}'-->
                     
@@ -216,10 +223,10 @@
                     
                     
                     </video>
-                    
+                 </div>
                         
-                    
-                </div>
+
+                    </div>
                 </div>
             </div>
         </div>

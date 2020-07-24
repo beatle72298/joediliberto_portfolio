@@ -400,7 +400,7 @@ var vidPlaylist = [{
     genre: 'Comedy',
     credits: 'Director: Jake Meyer',
     description: "Loyola University New Orleans senior thesis short. Jodie is a young woman in a complete stalemate with her parents, boss, and friends constantly blowing up her phone and proving her dissatisfaction is entirely founded.",
-    mycredits: 'Production Sound Mixer' + sp + 'Post-Production Sound Supervisor' + br + 'Post-Production Sound Editor' + sp + 'Post-Production Sound Mixer' + br + 'Foley Supervisor',
+    mycredits: 'Production Sound Mixer' + sp + 'Post-Production Sound Supervisor'+sp+'Post-Production Sound Editor' + sp + 'Post-Production Sound Mixer' +sp+'Foley Supervisor',
     duration: 520,
     sources: [{
         src: 'https://youtu.be/OJ6DYzNNPoM',
@@ -422,7 +422,7 @@ var vidPlaylist = [{
     genre: 'Comedy',
     credits: 'Director: Molly Redepenning',
     description: "Loyola University New Orleans senior thesis short. The Dead Still Dream follows an undead high school student as he manuvers all the usual difficulties of adolescence and tries to find his place in the world and his human peers.",
-    mycredits: 'Grip' + sp + 'Associate Producer' + sp + 'Production Sound Supervisor' + br + 'Production Sound Mixer' + sp + 'Boom Operator',
+    mycredits: 'Grip' + sp + 'Associate Producer' + sp + 'Production Sound Supervisor' +sp+ 'Production Sound Mixer' + sp + 'Boom Operator',
     duration: 481,
     sources: [{
         src: 'https://www.youtube.com/embed/SS45sZFLok4&amp;showinfo=0;',
@@ -536,7 +536,7 @@ var vidPlaylist = [{
     genre: 'Music Video',
     credits: 'Songwriter/Performer: Elijah Poston',
     description: "Final project submission for Digital Filmmaking I class. Pocket Change follows a disgruntled musician quarreling with lost love and lost dollars.",
-    mycredits: 'Writer' +sp+ 'Producer' +sp+ 'Director' +sp+ 'Cinematographer' +br+ 'Visual Effects Supervisor/Editor' +sp+ 'Assistant Editor',
+    mycredits: 'Writer' +sp+ 'Producer' +sp+ 'Director' +sp+ 'Cinematographer' +sp+ 'Visual Effects Supervisor/Editor' +sp+ 'Assistant Editor',
     duration: 317,
     sources: [{
         src: 'https://youtu.be/vLb8QiG45qg',
@@ -558,7 +558,7 @@ var vidPlaylist = [{
     genre: 'Action',
     credits: 'Songwriter/Performer: Elijah Poston',
     description: "Final project submission for Digital Filmmaking I class. Pocket Change follows a disgruntled musician quarreling with lost love and lost dollars.",
-    mycredits: 'Director' +sp+ 'Fight Choreographer' +sp+ 'Visual Effects Supervisor/Editor' +br+ 'Editor' +sp+ 'Post-Production Sound Editor/Mixer' +sp+ 'Foley Supervisor'+sp+'Score Composer',
+    mycredits: 'Director' +sp+ 'Fight Choreographer' +sp+ 'Visual Effects Supervisor/Editor' +sp+ 'Editor' +sp+ 'Post-Production Sound Editor/Mixer' +sp+ 'Foley Supervisor'+sp+'Score Composer',
     duration: 124,
     sources: [{
         src: 'https://www.youtube.com/watch?v=REwbCR8Grxw',
@@ -593,13 +593,14 @@ function horizPlaylist(){
     if (x.matches){
         vidPlayer.playlistUi({horizontal: false});
         $('.vjs-playlist').removeClass('vjs-playlist-horizontal');
+        $('.video-player-wrap').prepend($('.vjs-playlist'));
     } else {
         vidPlayer.playlistUi({horizontal: true});
         $('.video-player-wrap').append($('.vjs-playlist'));
     }
 }
 
-var x = window.matchMedia('(min-width: 1000px)')
+var x = window.matchMedia('(min-width: 1200px)')
 horizPlaylist(x)
 x.addListener(horizPlaylist)
 
