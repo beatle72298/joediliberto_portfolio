@@ -1441,6 +1441,10 @@ main{
 
 
 @media screen and (max-width: 650px){
+    body{
+        position: fixed;
+    }
+    
     .dd-menu li{
         padding: .8em 30px;
     }

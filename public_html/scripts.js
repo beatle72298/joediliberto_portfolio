@@ -744,6 +744,8 @@ $('#slick-3').on('beforeChange', function(event, slick, currentSlide, nextSlide)
 
 });
     
+window.addEventListener("deviceorientation", handleOrientation, true); 
+    
 if (window.DeviceOrientationEvent){
  
 
@@ -781,9 +783,10 @@ function handleOrientation(event) {
 }
 
     
-window.addEventListener("deviceorientation", handleOrientation, true);    
+   
 }
-    
+ 
+//document.body.addEventListener('touchmove', function(e){ e.preventDefault(); });
     
     
     
