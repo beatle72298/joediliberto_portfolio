@@ -1003,7 +1003,17 @@ li{list-style: none;}
     position: absolute;
     z-index: 3;
     width: 200px;
-    
+}
+
+#car-wrap{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: aqua;
+}
+
+#road{
+    position: relative;
 }
 
 

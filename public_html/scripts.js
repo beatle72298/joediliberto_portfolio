@@ -750,11 +750,11 @@ if (window.DeviceOrientationEvent){
  
 
 
-var road = document.querySelector('#car-wrap');
+var road = document.querySelector('body');
 var car = document.querySelector('#car');   
     
 var maxY = road.clientWidth - car.clientWidth;
-var maxX = road.clientHeight - ball.clientHeight;
+var maxX = road.clientHeight - car.clientHeight;
     
 function handleOrientation(event) {
   //var absolute = event.absolute;
@@ -780,7 +780,15 @@ function handleOrientation(event) {
   car.style.top  = (maxY*y/180 - 10) + "px";
   car.style.left = (maxX*x/180 - 10) + "px";
   
-}
+     //   if (mouse.y < 450){
+     //           car.style.top = 460 + 'px';
+     //           car.style.transform = "scale(1.5)";
+     //       } else if(mouse.y > 700){
+     //           car.style.top = 700 + 'px';
+     //       } else {
+     //           //car.style.top = carpos.y + 'px';}    
+
+    }
 
     
    
