@@ -882,6 +882,16 @@ li{list-style: none;}
     
 }
 
+    .bg-2{
+        display: flex;
+        justify-content: center;
+    }
+    .midnightHeart{
+        margin-left: unset;
+    
+    }
+
+
 @keyframes sunglow{
     0%{box-shadow: #FFD800 0px 0px 100px;}, 
     25%{box-shadow: #F59440 0px 0px 100px;},
@@ -1095,8 +1105,8 @@ li{list-style: none;}
 
 
 .grid-x,.grid-y{
-  width:100vw;
-  height:100vw;
+  width:150vw;
+  height:150vw;
   position:absolute;
   bottom:0;
   left:0;
@@ -1580,9 +1590,76 @@ main{
 
 @media screen and (max-width: 450px){
     #hero-title{font-size: 68px;}
-    
-    
-    
     .controlsInner{left: 60% !important;}
+}
+
+
+
+
+
+@media screen and (max-height: 900px){
+    #mute{top: 67%;}
+    #social-bar{bottom: 35vh;}
+    #subtitle-wrap{
+        position: absolute;
+        bottom: 70vh;
+        z-index: 5;
+    }
+    .subtitle{font-size: 32px;}
+    .midnightHeart{
+        height: 44vh;
+        width: 45vh;
+        top: 1vh;
+    }
+    .midnightCliffs{
+        top: 32vh;
+    }
+}
+
+@media screen and (max-height: 800px){
+    #subtitle-wrap{
+        bottom: 65vh;
+    }
+}
+
+
+@media screen and (max-height: 750px){
+    .midnightCliffs{
+        top: 30vh;
+    }
+}
+
+@media screen and (max-height: 600px){
+    .midnightCliffs{
+        top: 28vh;
+    }
+}
+
+
+@media screen and (max-height: 550px){
+    #subtitle-wrap{bottom: 65vh;}
+    .subtitle{font-size: 32px;}
+}
+@media screen and (max-height: 500px){
+    #subtitle-wrap{bottom: 62.5vh;}
+}
+
+@media screen and (orientation: landscape) and (max-height: 500px){
+/*
+    #social-bar{
+        bottom: 45vh;
+        left: 24%;
+    }
+    
+    #subtitle-wrap{
+        position: absolute;
+        bottom: 60vh;
+        z-index: 5;
+    }
+    
+    #mute{top: unset;}
+*/
     
 }
+
+

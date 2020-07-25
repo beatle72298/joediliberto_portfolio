@@ -617,7 +617,7 @@ function removeStars(){
     }
 }    
 
-var x2 = window.matchMedia('(max-width: 650px)')    
+var x2 = window.matchMedia('(max-width: 775px)')    
 removeStars(x2)
 x2.addListener(removeStars);
 //setInterval(horizPlaylist, 1000);
@@ -750,35 +750,35 @@ window.addEventListener("deviceorientation", handleOrientation, true);
  
 
 
-var road = document.querySelector('body');
-var car = document.querySelector('#car');   
+//var road = document.querySelector('body');
+//var car = document.querySelector('#car');   
     
-var maxY = road.clientWidth - car.clientWidth;
-var maxX = road.clientHeight - car.clientHeight;
+//var maxY = road.clientWidth - car.clientWidth;
+//var maxX = road.clientHeight - car.clientHeight;
     
-function handleOrientation(event) {
+//function handleOrientation(event) {
   //var absolute = event.absolute;
   //var alpha    = event.alpha;
     
     
-  var x  = event.beta;
-  var y  = event.gamma;
+  //var x  = event.beta;
+  //var y  = event.gamma;
     
     
   // Because we don't want to have the device upside down
   // We constrain the x value to the range [-90,90]
-  if (x >  90) { x =  90};
-  if (x < -90) { x = -90};
+ // if (x >  90) { x =  90};
+  //if (x < -90) { x = -90};
 
   // To make computation easier we shift the range of 
   // x and y to [0,180]
-  x += 90;
-  y += 90;
+  //x += 90;
+  //y += 90;
 
   // 10 is half the size of the ball
   // It center the positioning point to the center of the ball
-  car.style.top  = (maxY*y/180 - 10) + "px";
-  car.style.left = (maxX*x/180 - 10) + "px";
+//  car.style.top  = (maxY*y/180 - 10) + "px";
+ // car.style.left = (maxX*x/180 - 10) + "px";
   
      //   if (mouse.y < 450){
      //           car.style.top = 460 + 'px';
@@ -788,9 +788,9 @@ function handleOrientation(event) {
      //       } else {
      //           //car.style.top = carpos.y + 'px';}    
 
-}
+//}
     
-window.addEventListener("deviceorientation", handleOrientation, true); 
+//window.addEventListener("deviceorientation", handleOrientation, true); 
 
     
      
