@@ -608,10 +608,15 @@ x.addListener(horizPlaylist)
 function removeStars(){
     if (x2.matches){
         $('#starfield').remove();
+        $('.glitch-1').mgGlitch({destroy: true,glitch: false});
+        $('.glitch-2').mgGlitch({destroy: true,glitch: false});
+        $('.glitch-3').mgGlitch({destroy: true,glitch: false});
+        $('.glitch-4').mgGlitch({destroy: true,glitch: false});
         $('.glitch-1').removeClass('glitch-1');
         $('.glitch-2').removeClass('glitch-2');
         $('.glitch-3').removeClass('glitch-3');
         $('.glitch-4').removeClass('glitch-4');
+        
     } else{
         //$('body').prepend('<canvas id="starfield"></canvas>');
     }

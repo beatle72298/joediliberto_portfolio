@@ -1350,7 +1350,15 @@ main{
 }
 
 @media screen and (max-width: 1000px){
-
+    #track{font-size: 28px;}
+    #duration{
+        right: unset !important;
+        left: 3% !important;
+        top: 28px !important;
+    }
+    #duration::before{
+        content:'/ ';
+    }
     
 }
 
@@ -1396,6 +1404,11 @@ main{
     .dd-menu{
         margin-left: -15%;
         width: unset;
+    }
+    
+    .controlsInner{width: 60% !important}
+    #credit-wrap{
+        width: 90% !important;
     }
 }
 
@@ -1524,7 +1537,7 @@ main{
 */
     
     .controlsInner{
-        width: 110% !important;
+        width: 100% !important;
     }
     
     .s1{
@@ -1550,12 +1563,12 @@ main{
         height: 200px;
     }
     #volumeBtn{display: none !important;}
-    #timer, #duration{top: -35px;}
+
     
-    .bar{width: 111%;}
-    
+    #bar{width: 111% !important;}
+    #credit-wrap{width: 110% !important;}
     #slick-4{top: 20vh;}
-    #waveform{width: 111%;}
+    #waveform{width: 111% !important;}
     .side{ z-index: 999;}
     
     #music-section.content-slide{padding: 0;}
@@ -1594,7 +1607,7 @@ main{
 }
 
 
-
+/*---------------------------------------------------------------------------VERTICAL RESIZING------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 
 @media screen and (max-height: 900px){
@@ -1614,12 +1627,18 @@ main{
     .midnightCliffs{
         top: 32vh;
     }
+
 }
 
 @media screen and (max-height: 800px){
     #subtitle-wrap{
         bottom: 65vh;
     }
+
+    #credit-wrap{
+        top: 50vh !important;
+    }
+
 }
 
 
@@ -1627,11 +1646,27 @@ main{
     .midnightCliffs{
         top: 30vh;
     }
+         .album-slide{
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-height: 700px){
+    .controlsOuter{
+        bottom: 14vh !important;
+    }
 }
 
 @media screen and (max-height: 600px){
     .midnightCliffs{
         top: 28vh;
+    }
+        .back-home span{
+        bottom: 30%;
+    }
+        .controlsOuter{
+        bottom: 15vh !important;
     }
 }
 
@@ -1639,9 +1674,15 @@ main{
 @media screen and (max-height: 550px){
     #subtitle-wrap{bottom: 65vh;}
     .subtitle{font-size: 32px;}
+    .controlsOuter{
+        bottom: 17vh !important;
+    }
 }
 @media screen and (max-height: 500px){
-    #subtitle-wrap{bottom: 62.5vh;}
+    #subtitle-wrap{
+        bottom: 62.5vh;
+    }
+    #credit-wrap{top: 35vh !important;}
 }
 
 @media screen and (orientation: landscape) and (max-height: 500px){

@@ -24,7 +24,7 @@
   opacity: 0.9;
   font-weight: 300;
   color: #fff;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.33);
+
 }
 #timer {
   position: absolute;
@@ -313,17 +313,33 @@
 /*  transform: translateX(-15vw);*/
 }
 
+#music-player{
+    text-shadow: 2px 2px 2px black;
+}
+
 
 #credit-wrap{
     position: absolute;
     top: 58vh;
-    width: inherit;
+    width: 100%;
     text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#credhead{
+    width: 100%;
+    font-weight: 600;
+    text-decoration: underline;
 }
 
 #credits{
     font-size: 24px;
-    text-align: center;
+/*    text-align: center;*/
+    width: 80%;
+    display: block;
 }
 
 
