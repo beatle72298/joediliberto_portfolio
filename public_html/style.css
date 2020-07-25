@@ -105,7 +105,7 @@ h1{font-family: 'Press Start 2P', cursive; margin: 0px auto;}
 
 
 .back-home.hover{transform: scale(1.05);}
-.back-home span{position: absolute; right: 25%; bottom: 35%; white-space: nowrap; z-index: 999!important;}
+.back-home span{position: absolute; right: 25%; bottom: 35%; white-space: nowrap; z-index: 999!important; text-shadow: 2px 2px 2px black;}
 .b2 span{left: 25%; right: unset;}
 
 .left{transition: .5s ease all;}
@@ -278,10 +278,11 @@ h1, h2, a {z-index: 500;}
     display: flex;
     overflow-x: hidden;
     overflow-y: hidden;
-    width: 90vw;
+/*    width: 90vw;*/
     height: 95vh;
     position: absolute;
     left: 0;
+    z-index: 0;
 }
 
 #slick-2 > div{
@@ -1410,6 +1411,11 @@ main{
     #credit-wrap{
         width: 90% !important;
     }
+        
+    .galleria-theme-folio .galleria-thumbnails .galleria-image{
+        max-height: 200px !important;
+        max-width: 150px !important;
+    }
 }
 
 
@@ -1429,11 +1435,7 @@ main{
         margin-top: 30px;
         right: 0vw;
     }
-    
-    .galleria-theme-folio .galleria-thumbnails .galleria-image{
-        max-height: 200px !important;
-        max-width: 150px !important;
-    }
+
     
 }
 
@@ -1685,10 +1687,18 @@ main{
     }
 }
 @media screen and (max-height: 500px){
+    .back-home span{bottom: 50%;}
+    #bar{opacity: .5 !important; width: 100% !important;}
     #subtitle-wrap{
         bottom: 62.5vh;
     }
-    #credit-wrap{top: 35vh !important;}
+    #title{line-height: 24px !important; text-align: right;}
+    
+    #slick-4{opacity:.5}
+    #credit-wrap{top: 35vh !important; width: 90% !important; background-color: rgba(0,0,0,.5); border-radius: 50px; border: 1px aliceblue;}
+    #volumeBtn{display: none!important;}
+    .controlsInner{left: unset !important;}
+    .controlsOuter{ width: 90% !important; bottom: 25vh!important;}
 }
 
 @media screen and (orientation: landscape) and (max-height: 500px){
