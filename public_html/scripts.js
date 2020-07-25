@@ -759,8 +759,8 @@ function handleOrientation(event) {
   //var alpha    = event.alpha;
     
     
-  var xRot     = event.beta;
-  var yRot    = event.gamma;
+  var x    = event.beta;
+  var y    = event.gamma;
     
     
   // Because we don't want to have the device upside down
