@@ -1551,6 +1551,15 @@ main{
     }
     
     .dreams{margin-top: 25px; right: 0vw;}
+    
+    .controlsInner{left: 55% !important;}
+    
+    #social-bar{width: 100%; left: 0;}
+
+    .dd-menu li, .audio-menu li{
+        font-size:18px;
+        padding: 1.25em 10px;
+    }
 
 }
 
@@ -1558,11 +1567,8 @@ main{
 @media screen and (max-width: 450px){
     #hero-title{font-size: 68px;}
     
-    .dd-menu li, .audio-menu li{
-        font-size:18px;
-        padding: 1.25em 10px;
-    }
     
     
+    .controlsInner{left: 60% !important;}
     
 }

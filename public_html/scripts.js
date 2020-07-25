@@ -32,11 +32,11 @@ $(document).ready(function(){
         setTimeout(getMouseStart, 400);
         function getMouseStart(){
             initX = mouse.x;
-            console.log('initX:' + initX);
+            //console.log('initX:' + initX);
             //console.log('getMouseStart() FIRED!!')
         };
             
-        console.log('initX2:' + initX);
+        //console.log('initX2:' + initX);
         lastX = e.pageX;        
         diffX = initX - lastX;
             
@@ -604,6 +604,22 @@ var x = window.matchMedia('(min-width: 1200px)')
 horizPlaylist(x)
 x.addListener(horizPlaylist)
 
+    
+function removeStars(){
+    if (x2.matches){
+        $('#starfield').remove();
+        $('.glitch-1').removeClass('glitch-1');
+        $('.glitch-2').removeClass('glitch-2');
+        $('.glitch-3').removeClass('glitch-3');
+        $('.glitch-4').removeClass('glitch-4');
+    } else{
+        //$('body').prepend('<canvas id="starfield"></canvas>');
+    }
+}    
+
+var x2 = window.matchMedia('(max-width: 650px)')    
+removeStars(x2)
+x2.addListener(removeStars);
 //setInterval(horizPlaylist, 1000);
 
 
@@ -728,7 +744,46 @@ $('#slick-3').on('beforeChange', function(event, slick, currentSlide, nextSlide)
 
 });
     
+if (window.DeviceOrientationEvent){
+ 
 
+
+var road = document.querySelector('#car-wrap');
+var car = document.querySelector('#car');   
+    
+var maxY = road.clientWidth - car.clientWidth;
+var maxX = road.clientHeight - ball.clientHeight;
+    
+function handleOrientation(event) {
+  //var absolute = event.absolute;
+  //var alpha    = event.alpha;
+    
+    
+  var xRot     = event.beta;
+  var yRot    = event.gamma;
+    
+    
+  // Because we don't want to have the device upside down
+  // We constrain the x value to the range [-90,90]
+  if (x >  90) { x =  90};
+  if (x < -90) { x = -90};
+
+  // To make computation easier we shift the range of 
+  // x and y to [0,180]
+  x += 90;
+  y += 90;
+
+  // 10 is half the size of the ball
+  // It center the positioning point to the center of the ball
+  car.style.top  = (maxY*y/180 - 10) + "px";
+  car.style.left = (maxX*x/180 - 10) + "px";
+  
+}
+
+    
+window.addEventListener("deviceorientation", handleOrientation, true);    
+}
+    
     
     
     
