@@ -1671,6 +1671,9 @@ main{
         .controlsOuter{
         bottom: 15vh !important;
     }
+    
+    #sound_on{bottom: 10% !important;}
+    
 }
 
 
