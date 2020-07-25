@@ -1335,7 +1335,7 @@ main{
     }
         .video-player-wrap{
         grid-template-columns: unset;
-        grid-template-rows: 75% 25%;
+        grid-template-rows: 60% 30%;
     }
     .vjs-playlist{
         direction: ltr;
@@ -1661,6 +1661,7 @@ main{
     .controlsOuter{
         bottom: 14vh !important;
     }
+    .vjs-playlist-item{width: 40% !important;}
 }
 
 @media screen and (max-height: 600px){
@@ -1675,7 +1676,7 @@ main{
     }
     
     #sound_on{bottom: 10% !important;}
-    
+    .vjs-playlist-item{width: 30% !important;}
 }
 
 
@@ -1695,7 +1696,7 @@ main{
     #title{line-height: 24px !important; text-align: right;}
     
     #slick-4{opacity:.5}
-    #credit-wrap{top: 35vh !important; width: 90% !important; background-color: rgba(0,0,0,.5); border-radius: 50px; border: 1px aliceblue;}
+    #credit-wrap{top: 35vh !important; width: 90% !important; border-radius: 50px; border: 1px aliceblue;}
     #volumeBtn{display: none!important;}
     .controlsInner{left: unset !important;}
     .controlsOuter{ width: 90% !important; bottom: 25vh!important;}
