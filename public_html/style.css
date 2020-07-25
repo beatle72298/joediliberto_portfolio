@@ -1546,5 +1546,23 @@ main{
 }
 
 @media screen and (max-width: 500px){
+    #hero-title{
+        font-size: 72px;
+    }
+    
+    .dreams{margin-top: 25px; right: 0vw;}
+
+}
+
+
+@media screen and (max-width: 450px){
+    #hero-title{font-size: 68px;}
+    
+    .dd-menu li, .audio-menu li{
+        font-size:18px;
+        padding: 1.25em 10px;
+    }
+    
+    
     
 }
