@@ -746,7 +746,7 @@ $('#slick-3').on('beforeChange', function(event, slick, currentSlide, nextSlide)
     
 window.addEventListener("deviceorientation", handleOrientation, true); 
     
-if (window.DeviceOrientationEvent){
+//if (window.DeviceOrientationEvent){
  
 
 
@@ -761,8 +761,8 @@ function handleOrientation(event) {
   //var alpha    = event.alpha;
     
     
-  var x    = event.beta;
-  var y    = event.gamma;
+  var x  = event.beta;
+  var y  = event.gamma;
     
     
   // Because we don't want to have the device upside down
@@ -788,11 +788,13 @@ function handleOrientation(event) {
      //       } else {
      //           //car.style.top = carpos.y + 'px';}    
 
-    }
+}
+    
+window.addEventListener("deviceorientation", handleOrientation, true); 
 
     
-   
-}
+     
+//}
  
 //document.body.addEventListener('touchmove', function(e){ e.preventDefault(); });
     
