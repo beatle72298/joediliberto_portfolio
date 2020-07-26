@@ -12,9 +12,9 @@
     }
     
     body{
-        position: relative;
-        width: 500px;
-        height: 500px;
+/*        position: relative;*/
+        width: 200px;
+        height: 200px;
         background-color: grey;
     }
 
@@ -32,9 +32,9 @@
 </head>
 <body>
 
-<!--<div class="garden">-->
+<div class="garden">
   <div class="ball"></div>
-<!--</div>-->
+</div>
 
 <pre class="output"></pre>
     
@@ -45,7 +45,7 @@
 //window.addEventListener('deviceorientation', handleOrientation);
     
 var ball   = document.querySelector('.ball');
-var garden = document.querySelector('body');
+var garden = document.querySelector('.garden');
 var output = document.querySelector('.output');
 
 var maxX = garden.clientWidth  - ball.clientWidth;
@@ -67,8 +67,6 @@ if(window.DeviceOrientationEvent){
 
 
 function handleOrientation(event) {
-  //document.removeEventListener('mousemove', getMouse);
-  //console.log('Device Orientation changed!');
   var x = event.beta;  // In degree in the range [-180,180]
   var y = event.gamma; // In degree in the range [-90,90]
 
