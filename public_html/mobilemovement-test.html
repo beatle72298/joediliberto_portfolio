@@ -79,6 +79,7 @@ function handleOrientation(event) {
       console.log('Device Orientation changed!');
       //console.log(x);
       document.removeEventListener('mousemove', getMouse);
+      clearInterval(followMouse);
       // Because we don't want to have the device upside down
       // We constrain the x value to the range [-90,90]
       if (x >  90) { x =  90};
@@ -99,7 +100,7 @@ function handleOrientation(event) {
 
 
 function mapMouse(){
-    document.addEventListener('mousemove', getMouse)
+    document.addEventListener('mousemove', getMouse);
      
     var carpos = {x:0,y:0};      
 	setInterval(followMouse, 50);
@@ -111,9 +112,7 @@ function mapMouse(){
     function getMouse(e){
         mouse.x = e.pageX;
         mouse.y = e.pageY;
-        
-        
-        
+
         var lastX = 0;
         var diffX = 0;
         
@@ -138,7 +137,7 @@ function mapMouse(){
         
         ball.style.left = carpos.x + "px";
         ball.style.top = carpos.y + "px";
-}
+    }
     
 };
 
