@@ -9,7 +9,7 @@
       height: 200px;
       border: 5px solid #CCC;
       border-radius: 10px;
-      background-color: orange;
+      background-color: firebrick;
     }
     
 /*
@@ -81,16 +81,16 @@ function handleOrientation(event) {
     if (x == null){
         mapMouse();
         console.log("x="+x);
-        mapOrientation();
+        //mapOrientation(x,y);
     } else{
       console.log('Device Orientation changed!');
       //console.log(x);
       document.removeEventListener('mousemove', getMouse);
       clearInterval(followMouse);
-      mapOrientation();
+      mapOrientation(x,y);
     } 
     
-    function mapOrientation(){
+    function mapOrientation(x,y){
       
       console.log("x:"+x+' y:'+y);   
         
