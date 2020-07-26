@@ -28,7 +28,7 @@
     border-radius: 100%;
     } 
 </style>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -40,7 +40,7 @@
     
     
 <script>
-//document.ready(function(){    
+  
 
 //window.addEventListener('deviceorientation', handleOrientation);
     
@@ -50,15 +50,36 @@ var output = document.querySelector('.output');
 
 var maxX = garden.clientWidth  - ball.clientWidth;
 var maxY = garden.clientHeight - ball.clientHeight;    
+
+ 
     
-if(window.DeviceOrientationEvent){    
+//console.log(window.DeviceOrientationEvent);    
+    
+if(window.DeviceOrientationEvent){
+    console.log('this poopin browser supports DEVICEORIENTATION!');
+    window.addEventListener('deviceorientation', handleOrientation, false);
+    document.addEventListener('mousemove', getMouse);
+} else{
+    //document.addEventListener("mousemove", getMouse);
+    console.log('this poopin device sucks and does not support orientation');
+}
+
 
 function handleOrientation(event) {
+  //document.removeEventListener('mousemove', getMouse);
+  //console.log('Device Orientation changed!');
   var x = event.beta;  // In degree in the range [-180,180]
   var y = event.gamma; // In degree in the range [-90,90]
 
   output.innerHTML  = "beta : " + x + "\n";
   output.innerHTML += "gamma: " + y + "\n";
+  
+  if (x !== null){
+      console.log('Device Orientation changed!');
+      //console.log(x);
+      document.removeEventListener('mousemove', getMouse);
+  }
+    
 
   // Because we don't want to have the device upside down
   // We constrain the x value to the range [-90,90]
@@ -74,15 +95,17 @@ function handleOrientation(event) {
   // It center the positioning point to the center of the ball
   ball.style.top  = (maxY*y/180 - 10) + "px";
   ball.style.left = (maxX*x/180 - 10) + "px";
+  
+
+    
+    
 }
 
-window.addEventListener('deviceorientation', handleOrientation);
 
-} else {
     
-    document.addEventListener("mousemove", getMouse);
-    var carpos = {x:0,y:0};   
-        
+    //document.addEventListener("mousemove", getMouse);
+     
+    var carpos = {x:0,y:0};      
 	setInterval(followMouse, 50);
     
     var mouse = {x:0,y:0};
@@ -120,7 +143,7 @@ window.addEventListener('deviceorientation', handleOrientation);
         ball.style.top = carpos.y + "px";
     }
     
-}
+
 //});
 </script>    
 </body>
