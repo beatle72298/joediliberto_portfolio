@@ -9,7 +9,7 @@
       height: 200px;
       border: 5px solid #CCC;
       border-radius: 10px;
-      background-color: red;
+      background-color: orange;
     }
     
 /*
@@ -81,15 +81,19 @@ function handleOrientation(event) {
     if (x == null){
         mapMouse();
         console.log("x="+x);
+        mapOrientation();
     } else{
       console.log('Device Orientation changed!');
       //console.log(x);
       document.removeEventListener('mousemove', getMouse);
       clearInterval(followMouse);
-      mapRot();
+      mapOrientation();
     } 
     
-    function mapRot(){
+    function mapOrientation(){
+      
+      console.log("x:"+x+' y:'+y);   
+        
       // Because we don't want to have the device upside down
       // We constrain the x value to the range [-90,90]
       if (x >  90) { x =  90};
@@ -104,13 +108,15 @@ function handleOrientation(event) {
       // It center the positioning point to the center of the ball
       ball.style.top  = (maxY*y/180 - 10) + "px";
       ball.style.left = (maxX*x/180 - 10) + "px"; 
+        
+     //console.log("x:"+x+' y:'+y);    
     }
+    
    
 
 }
 
 
-    
 
     
     
