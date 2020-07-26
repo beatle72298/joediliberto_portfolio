@@ -58,7 +58,7 @@ var maxY = garden.clientHeight - ball.clientHeight;
 if(window.DeviceOrientationEvent){
     console.log('this poopin browser supports DEVICEORIENTATION!');
     window.addEventListener('deviceorientation', handleOrientation);
-    mapMouse();
+   // mapMouse();
     //document.addEventListener('mousemove', getMouse);
 } else{
     //document.addEventListener("mousemove", getMouse);
@@ -94,8 +94,10 @@ function handleOrientation(event) {
       // It center the positioning point to the center of the ball
       ball.style.top  = (maxY*y/180 - 10) + "px";
       ball.style.left = (maxX*x/180 - 10) + "px";
+    } else{
+          mapMouse();
     }
-
+    
 }
 
 
