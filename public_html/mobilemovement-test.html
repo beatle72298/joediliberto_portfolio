@@ -12,7 +12,7 @@
     }
     
     body{
-/*        position: relative;*/
+        position: relative;
         width: 500px;
         height: 500px;
         background-color: grey;
@@ -51,7 +51,7 @@ var output = document.querySelector('.output');
 var maxX = garden.clientWidth  - ball.clientWidth;
 var maxY = garden.clientHeight - ball.clientHeight;    
     
-if(window.DeviceOrientationEvent){    
+if(window.ondeviceorientation){    
 
 function handleOrientation(event) {
   var x = event.beta;  // In degree in the range [-180,180]
@@ -85,10 +85,19 @@ window.addEventListener('deviceorientation', handleOrientation);
         
 	setInterval(followMouse, 50);
     
+    var mouse = {x:0,y:0};
+    
+    var initX;
     
     function getMouse(e){
         mouse.x = e.pageX;
         mouse.y = e.pageY;
+        
+        
+        
+        var lastX = 0;
+        var diffX = 0;
+        
         setTimeout(getMouseStart, 400);
         function getMouseStart(){
             initX = mouse.x;
