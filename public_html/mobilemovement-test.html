@@ -42,7 +42,7 @@
 <script>
 //document.ready(function(){    
 
-//window.addEventListener('deviceorientation', handleOrientation);
+window.addEventListener('deviceorientation', handleOrientation);
     
 var ball   = document.querySelector('.ball');
 var garden = document.querySelector('body');
@@ -51,7 +51,7 @@ var output = document.querySelector('.output');
 var maxX = garden.clientWidth  - ball.clientWidth;
 var maxY = garden.clientHeight - ball.clientHeight;    
     
-if(window.ondeviceorientation){    
+if(window.deviceorientation){    
 
 function handleOrientation(event) {
   var x = event.beta;  // In degree in the range [-180,180]
