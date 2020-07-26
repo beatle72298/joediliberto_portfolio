@@ -57,7 +57,7 @@ var maxY = garden.clientHeight - ball.clientHeight;
     
 if(window.DeviceOrientationEvent){
     console.log('this poopin browser supports DEVICEORIENTATION!');
-    window.addEventListener('deviceorientation', handleOrientation);
+    window.addEventListener('deviceorientation', handleOrientation, false);
    // mapMouse();
     //document.addEventListener('mousemove', getMouse);
 } else{
@@ -73,17 +73,16 @@ function handleOrientation(event) {
   output.innerHTML  = "beta : " + x + "\n";
   output.innerHTML += "gamma: " + y + "\n";
   
-  if (x !== null){
-      console.log('Device Orientation changed!');
+  if (x == null){
+        mapMouse();
+        console.log("x="+x);
+ } else{
+       console.log('Device Orientation changed!');
       //console.log(x);
       document.removeEventListener('mousemove', getMouse);
       //clearInterval(followMouse);
-
-    } else{
-          mapMouse();
-    }
-    
-          // Because we don't want to have the device upside down
+ }
+       // Because we don't want to have the device upside down
       // We constrain the x value to the range [-90,90]
       if (x >  90) { x =  90};
       if (x < -90) { x = -90};
