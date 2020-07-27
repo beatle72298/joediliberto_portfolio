@@ -291,7 +291,7 @@
     text-align: left;
     font-weight: 200;
     text-transform: uppercase;
-    font-size: 3vw;
+    font-size: 32px;
     animation: shiver 1s linear .5s infinite;
     pointer-events: none;
 }
@@ -353,7 +353,7 @@
     -moz-animation: move 2s linear infinite;
     -ms-animation: move 2s linear infinite;
     animation: move 2s linear infinite;
-    animation: var(--shiver);
+    animation: var(--flicker-notransform);
 }
 
 @-webkit-keyframes move {

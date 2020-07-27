@@ -1,4 +1,4 @@
-
+$('#welcome_btn').fadeOut(10);
 
 let power = function() {
     let loaderWrap = document.getElementById("loader-wrap");
@@ -6,9 +6,9 @@ let power = function() {
 }
 
 $(document).ready(function(){
-    $('#welcome_btn').fadeOut(10);
-//    var stupidJs = setTimeout(screenOff, 10000);
-      var stupidJs = setTimeout(screenOff, 10);
+    
+      var stupidJs = setTimeout(screenOff, 12000);
+      //var stupidJs = setTimeout(screenOff, 10);
 
     function screenOff(){
         $('.on #content').css('animation','screen-turn-off .4s linear .5s 1 both reverse');
@@ -22,7 +22,7 @@ $(document).ready(function(){
     });
     
     function fuckYou(){
-      $('#loader-wrap').slideUp(200).fadeOut(100, function(){
+      $('#loader-wrap').fadeOut(200, function(){
           $('#loader-wrap').remove();
       });
       
