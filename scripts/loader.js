@@ -7,7 +7,7 @@ let power = function() {
 
 $(document).ready(function(){
     
-      var stupidJs = setTimeout(screenOff, 12000);
+      var stupidJs = setTimeout(screenOff, 20000);
       //var stupidJs = setTimeout(screenOff, 10);
 
     function screenOff(){
@@ -34,7 +34,7 @@ $(document).ready(function(){
 	var $loadtime = $("#loader-text")
 	var inc = 30;
 
-	var sp = 1;
+	var sp = 20;
 		
 	animateOrangeLoader(inc, sp);
 						
