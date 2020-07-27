@@ -34,7 +34,7 @@ $(document).ready(function(){
 	var $loadtime = $("#loader-text")
 	var inc = 30;
 
-	var sp = 20;
+	var sp = 1;
 		
 	animateOrangeLoader(inc, sp);
 						
