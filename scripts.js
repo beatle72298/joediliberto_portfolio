@@ -5,11 +5,11 @@ $(document).ready(function(){
 var ball   = document.querySelector('.box');
 var garden = document.querySelector('.garden');
 
-var maxX = garden.clientWidth  - ball.clientWidth;
-var maxY = garden.clientHeight - ball.clientHeight; 
+var maxY = garden.clientWidth  - ball.clientWidth;
+//var maxY = garden.clientHeight - ball.clientHeight; 
     
 
-var maxY = (garden.clientHeight - ball.clientHeight) * .75; 
+var maxX = (garden.clientHeight - ball.clientHeight) * .75; 
 
 if(window.DeviceOrientationEvent){
     console.log('this poopin browser supports DEVICEORIENTATION!');
