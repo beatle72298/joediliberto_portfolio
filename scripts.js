@@ -3,9 +3,9 @@
 $(document).ready(function(){  
 
  
-    let isMobile = window.matchMedia("only screen and (max-device-width: 760px)").matches;
+    var isMobile = window.matchMedia("only screen and (max-width: 760px)");
 
-    if (isMobile) {
+    if (isMobile.matches) {
         //Conditional script here
         window.addEventListener('deviceorientation', handleOrientation, false);
         document.removeEventListener('mousemove', getMouse);
@@ -13,7 +13,7 @@ $(document).ready(function(){
         mapMouse();
         window.removeEventListener('deviceorientation', handleOrientation, false);
     }
-   
+ 
     
     
 var ball   = document.querySelector('.box');
