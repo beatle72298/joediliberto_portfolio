@@ -27,9 +27,6 @@ var maxX = garden.clientHeight - ball.clientHeight;
 function handleOrientation(event) {
   var  y = event.beta;  // In degree in the range [-180,180]
   var  x = event.gamma; // In degree in the range [-90,90]
-
-  //output.innerHTML  = "beta : " + x + "\n";
-  //output.innerHTML += "gamma: " + y + "\n";
         
       // Because we don't want to have the device upside down
       // We constrain the x value to the range [-90,90]
@@ -46,25 +43,11 @@ function handleOrientation(event) {
       ball.style.top  = (maxY*y/180 - 100 + 500) + "px";
       ball.style.left = (maxX*x/180 - 100) + "px"; 
         
-
-    //if (x == 90){
-//    mapMouse();
-    //console.log("x="+x);
-    //mapOrientation();
-
-    //} else{
-    //console.log('Device Orientation changed!');
-    //console.log("x="+x);
-    //document.removeEventListener('mousemove', getMouse);
-
-    //} else{
-    //console.log('Device Orientation changed!');
-    //console.log("x="+x);
-  //document.removeEventListener('mousemove', getMouse);
-  //clearInterval(followMouse);
-  //mapOrientation();
-//} 
-
+      var ballTop = ball.style.top;
+        
+      var carScale = 'scale('+ ballTop/300 +')';
+            //car.style.transform = '"'+ carScale +'"';
+      ball.style.transform = carScale;
 }
     
 function mapMouse(){
@@ -142,7 +125,7 @@ function mapMouse(){
 			car.style.left = carpos.x + "px";
 			car.style.top = carpos.y + "px";
             
-            
+            //console.log('top: ' + car.style.top)
             
             //console.log(carScale);
             
