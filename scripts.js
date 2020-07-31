@@ -2,7 +2,11 @@
     
 $(document).ready(function(){  
  
-    
+if (window.matchMedia('only screen and (max-width: 750px)').matches){
+    window.addEventListener('deviceorientation', handleOrientation, false);
+}else{
+    mapMouse();
+}    
     
 var ball   = document.querySelector('.box');
 var garden = document.querySelector('.garden');
@@ -13,12 +17,12 @@ var maxY = garden.clientWidth  - ball.clientWidth;
 
 var maxX = garden.clientHeight - ball.clientHeight; 
 
-if(window.DeviceOrientationEvent){
-    console.log('this poopin browser supports DEVICEORIENTATION!');
-    window.addEventListener('deviceorientation', handleOrientation, false);
-} else{
-    console.log('this poopin device sucks and does not support orientation');
-}
+//if(window.DeviceOrientationEvent){
+//    console.log('this poopin browser supports DEVICEORIENTATION!');
+//    //window.addEventListener('deviceorientation', handleOrientation, false);
+//} else{
+//    console.log('this poopin device sucks and does not support orientation');
+//}
 
 function handleOrientation(event) {
   var  y = event.beta;  // In degree in the range [-180,180]
