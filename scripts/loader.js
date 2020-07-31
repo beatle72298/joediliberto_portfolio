@@ -7,8 +7,8 @@ let power = function() {
 
 $(document).ready(function(){
     
-      var stupidJs = setTimeout(screenOff, 20000);
-      //var stupidJs = setTimeout(screenOff, 10);
+      //var stupidJs = setTimeout(screenOff, 20000);
+      var stupidJs = setTimeout(screenOff, 10);
 
     function screenOff(){
         $('.on #content').css('animation','screen-turn-off .4s linear .5s 1 both reverse');
