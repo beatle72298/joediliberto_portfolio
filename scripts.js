@@ -3,9 +3,9 @@
 $(document).ready(function(){  
 
  
-    var isMobile = window.matchMedia("only screen and (max-width: 760px)");
+    //var isMobile = window.matchMedia("only screen and (max-width: 760px)");
 
-    if (isMobile.matches) {
+    if (window.matchMedia('only screen and max-width: 760px)').matches) {
         //Conditional script here
         window.addEventListener('deviceorientation', handleOrientation, false);
         document.removeEventListener('mousemove', getMouse);
@@ -27,7 +27,6 @@ var maxX = garden.clientHeight - ball.clientHeight;
 
 if(window.DeviceOrientationEvent){
     console.log('this poopin browser supports DEVICEORIENTATION!');
-    //document.addEventListener('mousemove', getMouse);
 } else{
     console.log('this poopin device sucks and does not support orientation');
 }
