@@ -6,7 +6,10 @@ var ball   = document.querySelector('.box');
 var garden = document.querySelector('.garden');
 
 var maxX = garden.clientWidth  - ball.clientWidth;
-var maxY = garden.clientHeight - ball.clientHeight;    
+var maxY = garden.clientHeight - ball.clientHeight; 
+    
+
+var maxY = (garden.clientHeight - ball.clientHeight) * .75; 
 
 if(window.DeviceOrientationEvent){
     console.log('this poopin browser supports DEVICEORIENTATION!');
@@ -17,8 +20,8 @@ if(window.DeviceOrientationEvent){
 }
 
 function handleOrientation(event) {
-  var  x = event.beta;  // In degree in the range [-180,180]
-  var  y = event.gamma; // In degree in the range [-90,90]
+  var  y = event.beta;  // In degree in the range [-180,180]
+  var  x = event.gamma; // In degree in the range [-90,90]
 
   //output.innerHTML  = "beta : " + x + "\n";
   //output.innerHTML += "gamma: " + y + "\n";
