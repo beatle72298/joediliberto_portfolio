@@ -1,13 +1,61 @@
 
-
+    
 $(document).ready(function(){  
 
+var ball   = document.querySelector('.box');
+var garden = document.querySelector('.garden');
+
+var maxX = garden.clientWidth  - ball.clientWidth;
+var maxY = garden.clientHeight - ball.clientHeight;    
+
+if(window.DeviceOrientationEvent){
+    console.log('this poopin browser supports DEVICEORIENTATION!');
+    //document.addEventListener('mousemove', getMouse);
+    window.addEventListener('deviceorientation', handleOrientation, false);
+} else{
+    console.log('this poopin device sucks and does not support orientation');
+}
+
+function handleOrientation(event) {
+  var  x = event.beta;  // In degree in the range [-180,180]
+  var  y = event.gamma; // In degree in the range [-90,90]
+
+  //output.innerHTML  = "beta : " + x + "\n";
+  //output.innerHTML += "gamma: " + y + "\n";
+        
+      // Because we don't want to have the device upside down
+      // We constrain the x value to the range [-90,90]
+      if (x >  90) { x =  90};
+      if (x < -90) { x = -90};
+
+      // To make computation easier we shift the range of 
+      // x and y to [0,180]
+      x += 90;
+      y += 90;
+
+      // 10 is half the size of the ball
+      // It center the positioning point to the center of the ball
+      ball.style.top  = (maxY*y/180 - 100) + "px";
+      ball.style.left = (maxX*x/180 - 100) + "px"; 
+        
+
+    if (x == 90){
+    mapMouse();
+    console.log("x="+x);
+    //mapOrientation();
+    } else{
+    console.log('Device Orientation changed!');
+    console.log("x="+x);
+  //document.removeEventListener('mousemove', getMouse);
+  //clearInterval(followMouse);
+  //mapOrientation();
+} 
+}
     
-    var car = document.getElementById("car");
-    
+function mapMouse(){
     document.addEventListener("mousemove", getMouse); 
-	   
-        var carpos = {x:0,y:0};   
+    var car = document.getElementById("car");
+    var carpos = {x:0,y:0};   
         
 		setInterval(followMouse, 50);
 		
@@ -92,7 +140,13 @@ $(document).ready(function(){
                 //car.style.top = carpos.y + 'px';
             }    
         }
-
+};
+    
+    
+    
+    
+	   
+        
     
     
     $('.slick').slick({

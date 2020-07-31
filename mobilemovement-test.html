@@ -54,10 +54,6 @@ var output = document.querySelector('.output');
 var maxX = garden.clientWidth  - ball.clientWidth;
 var maxY = garden.clientHeight - ball.clientHeight;    
 
- 
-    
-//console.log(window.DeviceOrientationEvent);    
-    
 if(window.DeviceOrientationEvent){
     console.log('this poopin browser supports DEVICEORIENTATION!');
     //document.addEventListener('mousemove', getMouse);
@@ -65,6 +61,11 @@ if(window.DeviceOrientationEvent){
 } else{
     console.log('this poopin device sucks and does not support orientation');
 }
+
+ 
+    
+//console.log(window.DeviceOrientationEvent);    
+    
 
 
 //window.addEventListener('deviceorientation', handleOrientation, false);
