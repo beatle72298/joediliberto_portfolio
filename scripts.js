@@ -1,18 +1,6 @@
 
     
 $(document).ready(function(){  
-
-// 
-//    var isMobile = window.matchMedia("only screen and (max-width: 760px)");
-//
-//    if (window.matchMedia('only screen and max-width: 760px)').matches) {
-//        //Conditional script here
-//        window.addEventListener('deviceorientation', handleOrientation, false);
-//        document.removeEventListener('mousemove', getMouse);
-//    }else{
-//        mapMouse();
-//        window.removeEventListener('deviceorientation', handleOrientation, false);
-//    }
  
     
     
@@ -59,10 +47,16 @@ function handleOrientation(event) {
 //    mapMouse();
     //console.log("x="+x);
     //mapOrientation();
+
     //} else{
     //console.log('Device Orientation changed!');
     //console.log("x="+x);
     //document.removeEventListener('mousemove', getMouse);
+
+    //} else{
+    //console.log('Device Orientation changed!');
+    //console.log("x="+x);
+  //document.removeEventListener('mousemove', getMouse);
   //clearInterval(followMouse);
   //mapOrientation();
 //} 
