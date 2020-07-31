@@ -49,7 +49,7 @@ function handleOrientation(event) {
     } else{
     console.log('Device Orientation changed!');
     console.log("x="+x);
-  //document.removeEventListener('mousemove', getMouse);
+    document.removeEventListener('mousemove', getMouse);
   //clearInterval(followMouse);
   //mapOrientation();
 } 
