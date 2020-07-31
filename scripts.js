@@ -2,6 +2,20 @@
     
 $(document).ready(function(){  
 
+ 
+    let isMobile = window.matchMedia("only screen and (max-device-width: 760px)").matches;
+
+    if (isMobile) {
+        //Conditional script here
+        window.addEventListener('deviceorientation', handleOrientation, false);
+        document.removeEventListener('mousemove', getMouse);
+    }else{
+        mapMouse();
+        window.removeEventListener('deviceorientation', handleOrientation, false);
+    }
+   
+    
+    
 var ball   = document.querySelector('.box');
 var garden = document.querySelector('.garden');
 
@@ -9,12 +23,11 @@ var maxY = garden.clientWidth  - ball.clientWidth;
 //var maxY = garden.clientHeight - ball.clientHeight; 
     
 
-var maxX = (garden.clientHeight - ball.clientHeight) * .75; 
+var maxX = garden.clientHeight - ball.clientHeight; 
 
 if(window.DeviceOrientationEvent){
     console.log('this poopin browser supports DEVICEORIENTATION!');
     //document.addEventListener('mousemove', getMouse);
-    window.addEventListener('deviceorientation', handleOrientation, false);
 } else{
     console.log('this poopin device sucks and does not support orientation');
 }
@@ -43,13 +56,13 @@ function handleOrientation(event) {
         
 
     if (x == 90){
-    mapMouse();
+//    mapMouse();
     console.log("x="+x);
     //mapOrientation();
     } else{
     console.log('Device Orientation changed!');
     console.log("x="+x);
-    document.removeEventListener('mousemove', getMouse);
+    //document.removeEventListener('mousemove', getMouse);
   //clearInterval(followMouse);
   //mapOrientation();
 } 
