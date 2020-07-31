@@ -45,7 +45,7 @@ function handleOrientation(event) {
         
       var ballTop = ball.style.top;
         
-      var carScale = 'scale('+ ballTop/500 +')';
+      var carScale = 'scale('+ ballTop/300 +')';
             //car.style.transform = '"'+ carScale +'"';
       ball.style.transform = carScale;
 }
