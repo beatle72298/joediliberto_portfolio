@@ -41,7 +41,7 @@ function handleOrientation(event) {
       // 10 is half the size of the ball
       // It center the positioning point to the center of the ball
       ball.style.top  = (maxY*y/180 - 100 + 500) + "px";
-      ball.style.left = (maxX*x/180 - 100) + "px"; 
+      ball.style.left = (maxX*x/180 - 200) + "px"; 
         
       var ballTop = ball.style.top;
         
@@ -867,8 +867,8 @@ window.addEventListener("deviceorientation", handleOrientation, true);
 
 
  bgMusic = new Howl({
-   src: ['audio/Bg_Shyguys_Pursuit_1.mp3'],
-//    src: ['audio/BgSprite_Marvel83_2049_Song.mp3'],
+//   src: ['audio/Bg_Shyguys_Pursuit_1.mp3'],
+    src: ['audio/BgSprite_Marvel83_2049_Song.mp3'],
     volume: 0.5,
     loop: true,
 });  
